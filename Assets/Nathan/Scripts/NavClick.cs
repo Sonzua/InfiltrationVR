@@ -5,17 +5,17 @@ using UnityEngine.AI;
 
 public class NavClick : MonoBehaviour
 {
-    public float shootDistance = 10f;
-    public float shootRate = .5f;
 
     public NavMeshAgent navMeshAgent;
     private Ray shootRay;
     private RaycastHit shootHit;
     private bool walking;
+    public GameObject walkpointer;
 
     // Use this for initialization
     void Awake()
     {
+        //swalkpointer = GetComponent<>();
         navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
@@ -36,12 +36,16 @@ public class NavClick : MonoBehaviour
 
         if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
         {
-            if (!navMeshAgent.hasPath || Mathf.Abs(navMeshAgent.velocity.sqrMagnitude) < float.Epsilon)
+        if (!navMeshAgent.hasPath || Mathf.Abs(navMeshAgent.velocity.sqrMagnitude) < float.Epsilon)
                 walking = false;
         }
         else
         {
-            walking = true;
+                walking = true;
+        }
+        if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
+        {
+           // navMeshAgent.isStopped = true;
         }
     }
 }
