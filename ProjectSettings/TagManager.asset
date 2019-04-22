@@ -5,6 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - "Cl\xE9"
+  - ExcludeTeleport
+  - Leg
+  - SnapCube
+  - Arm
+  - SnapCylinder
+  - Saucers
+  - Torso
+  - Head
+  - Ennemi
   layers:
   - Default
   - TransparentFX
