@@ -37,6 +37,7 @@ public class SwitchArme : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
+            
             couteau.SetActive(true);
             pistolet.SetActive(false);
             teleporteur.SetActive(false);
