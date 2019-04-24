@@ -2,50 +2,53 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using VRTK;
 
 public class NavClick : MonoBehaviour
 {
 
-    public NavMeshAgent navMeshAgent;
-    private Ray shootRay;
-    private RaycastHit shootHit;
-    private bool walking;
-    public GameObject walkpointer;
+    public NavMeshAgent agent;
+    public GameObject hand;
+    public VRTK_Pointer pointer;
+    public bool Nav = false;
+
+
 
     // Use this for initialization
     void Awake()
     {
         //swalkpointer = GetComponent<>();
-        navMeshAgent = GetComponent<NavMeshAgent>();
+        agent = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-        if (Input.GetButtonDown("Fire2"))
+        pointer = hand.GetComponentInChildren<VRTK_Pointer>();
+        if (Nav == true)
         {
-            if (Physics.Raycast(ray, out hit, 100))
-
-            {
-                walking = true;
-                navMeshAgent.destination = hit.point;
-            }
+            Vector3 reticle = pointer.pointerRenderer.GetDestinationHit().point;
+            agent.destination = reticle;
+            agent.isStopped = false;
         }
 
-        if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
-        {
-        if (!navMeshAgent.hasPath || Mathf.Abs(navMeshAgent.velocity.sqrMagnitude) < float.Epsilon)
-                walking = false;
-        }
-        else
-        {
-                walking = true;
-        }
-        if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
-        {
-           // navMeshAgent.isStopped = true;
-        }
+
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //RaycastHit hit;
+        //if (Physics.Raycast(reticle, Camera.main.transform.forward, out hit, 100.0f))
+        //{
+        //Move to location that was hit with the raycast
+        //agent.destination = reticle;
+        //agent.isStopped = false;
+        //}
+        //}
+    }
+
+    public void ActivationButtonReleased()
+    {
+        Vector3 reticle = pointer.pointerRenderer.GetDestinationHit().point;
+        agent.destination = reticle;
+        agent.isStopped = false;
     }
 }
