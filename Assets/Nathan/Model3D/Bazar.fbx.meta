@@ -1,0 +1,316 @@
+fileFormatVersion: 2
+guid: 935b608c792136e419fca444aa81c62e
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Abdo_Droite
+    100002: Abdo_Gauche
+    100004: Armure
+    100006: //RootNode
+    100008: Bazar
+    100010: Bazar1
+    100012: Bazar2
+    100014: Brassard_Droite
+    100016: Brassard_Gauche
+    100018: Central1
+    100020: Central_Droite
+    100022: Central_Gauche
+    100024: Corne4
+    100026: Corne4 1
+    100028: Corne4 2
+    100030: Corne5
+    100032: Corne5 1
+    100034: Corne5 2
+    100036: Corne6
+    100038: Corne6 1
+    100040: Corne6 2
+    100042: Corp
+    100044: Corp1
+    100046: Epaule_Droite
+    100048: Epaule_Gauche
+    100050: group1
+    100052: group2
+    100054: group3
+    100056: JambeGauche
+    100058: Jet_pack
+    100060: Oeil
+    100062: Oeil 1
+    100064: Oeil 2
+    100066: Oeil_Support
+    100068: Oeil_Support 1
+    100070: Oeil_Support 2
+    100072: pCube1
+    100074: pCube2
+    100076: pCube3
+    100078: pCube79
+    100080: pCube80
+    100082: pCube83
+    100084: pCube84
+    100086: pCube85
+    100088: pCube86
+    100090: pCylinder5
+    100092: pCylinder7
+    100094: Tete
+    100096: Tete 1
+    100098: Tete 2
+    400000: Abdo_Droite
+    400002: Abdo_Gauche
+    400004: Armure
+    400006: Bazar
+    400008: //RootNode
+    400010: Bazar1
+    400012: Bazar2
+    400014: Brassard_Droite
+    400016: Brassard_Gauche
+    400018: Central1
+    400020: Central_Droite
+    400022: Central_Gauche
+    400024: Corne4
+    400026: Corne4 1
+    400028: Corne4 2
+    400030: Corne5
+    400032: Corne5 1
+    400034: Corne5 2
+    400036: Corne6
+    400038: Corne6 1
+    400040: Corne6 2
+    400042: Corp
+    400044: Corp1
+    400046: Epaule_Droite
+    400048: Epaule_Gauche
+    400050: group1
+    400052: group2
+    400054: group3
+    400056: JambeGauche
+    400058: Jet_pack
+    400060: Oeil
+    400062: Oeil 1
+    400064: Oeil 2
+    400066: Oeil_Support
+    400068: Oeil_Support 1
+    400070: Oeil_Support 2
+    400072: pCube1
+    400074: pCube2
+    400076: pCube3
+    400078: pCube79
+    400080: pCube80
+    400082: pCube83
+    400084: pCube84
+    400086: pCube85
+    400088: pCube86
+    400090: pCylinder5
+    400092: pCylinder7
+    400094: Tete
+    400096: Tete 1
+    400098: Tete 2
+    2100000: lambert2
+    2100002: lambert4
+    2100004: lambert3
+    2100006: lambert5
+    2300000: Abdo_Droite
+    2300002: Abdo_Gauche
+    2300004: Brassard_Droite
+    2300006: Brassard_Gauche
+    2300008: Central1
+    2300010: Central_Droite
+    2300012: Central_Gauche
+    2300014: Corne4
+    2300016: Corne4 1
+    2300018: Corne4 2
+    2300020: Corne5
+    2300022: Corne5 1
+    2300024: Corne5 2
+    2300026: Corne6
+    2300028: Corne6 1
+    2300030: Corne6 2
+    2300032: Corp
+    2300034: Corp1
+    2300036: Epaule_Droite
+    2300038: Epaule_Gauche
+    2300040: Oeil
+    2300042: Oeil 1
+    2300044: Oeil 2
+    2300046: Oeil_Support
+    2300048: Oeil_Support 1
+    2300050: Oeil_Support 2
+    2300052: pCube1
+    2300054: pCube2
+    2300056: pCube3
+    2300058: pCube79
+    2300060: pCube80
+    2300062: pCube83
+    2300064: pCube84
+    2300066: pCube85
+    2300068: pCube86
+    2300070: pCylinder5
+    2300072: pCylinder7
+    2300074: Tete
+    2300076: Tete 1
+    2300078: Tete 2
+    3300000: Abdo_Droite
+    3300002: Abdo_Gauche
+    3300004: Brassard_Droite
+    3300006: Brassard_Gauche
+    3300008: Central1
+    3300010: Central_Droite
+    3300012: Central_Gauche
+    3300014: Corne4
+    3300016: Corne4 1
+    3300018: Corne4 2
+    3300020: Corne5
+    3300022: Corne5 1
+    3300024: Corne5 2
+    3300026: Corne6
+    3300028: Corne6 1
+    3300030: Corne6 2
+    3300032: Corp
+    3300034: Corp1
+    3300036: Epaule_Droite
+    3300038: Epaule_Gauche
+    3300040: Oeil
+    3300042: Oeil 1
+    3300044: Oeil 2
+    3300046: Oeil_Support
+    3300048: Oeil_Support 1
+    3300050: Oeil_Support 2
+    3300052: pCube1
+    3300054: pCube2
+    3300056: pCube3
+    3300058: pCube79
+    3300060: pCube80
+    3300062: pCube83
+    3300064: pCube84
+    3300066: pCube85
+    3300068: pCube86
+    3300070: pCylinder5
+    3300072: pCylinder7
+    3300074: Tete
+    3300076: Tete 1
+    3300078: Tete 2
+    4300000: Corp
+    4300002: pCube83
+    4300004: pCylinder7
+    4300006: pCube80
+    4300008: pCylinder5
+    4300010: pCube79
+    4300012: Oeil
+    4300014: Tete
+    4300016: Corne5
+    4300018: Corne6
+    4300020: Corne4
+    4300022: Oeil_Support
+    4300024: Epaule_Gauche
+    4300026: Epaule_Droite
+    4300028: Abdo_Gauche
+    4300030: Central1
+    4300032: Central_Droite
+    4300034: Central_Gauche
+    4300036: Abdo_Droite
+    4300038: Brassard_Gauche
+    4300040: Brassard_Droite
+    4300042: Oeil
+    4300044: Tete
+    4300046: Corne5
+    4300048: Corne6
+    4300050: Corne4
+    4300052: Oeil_Support
+    4300054: Oeil
+    4300056: Tete
+    4300058: Corne5
+    4300060: Corne6
+    4300062: Corne4
+    4300064: Oeil_Support
+    4300066: Corp1
+    4300068: pCube3
+    4300070: pCube2
+    4300072: pCube1
+    4300074: pCube84
+    4300076: pCube85
+    4300078: pCube86
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,165 @@
+fileFormatVersion: 2
+guid: 1dd1ca75bad9ec74894aa6c9a8ae7fa9
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Cable2
+    100002: Cable3
+    100004: Cable_Support
+    100006: Calbe1
+    100008: Clavier
+    100010: Clavier_Support
+    100012: Ecran
+    100014: Ecran_Support
+    100016: Haut_Stase2
+    100018: Haut_Staze1
+    100020: Prise
+    100022: Prise_Support
+    100024: Stase
+    100026: //RootNode
+    100028: Support_Stase
+    400000: Cable2
+    400002: Cable3
+    400004: Cable_Support
+    400006: Calbe1
+    400008: Clavier
+    400010: Clavier_Support
+    400012: Ecran
+    400014: Ecran_Support
+    400016: Haut_Stase2
+    400018: Haut_Staze1
+    400020: Prise
+    400022: Prise_Support
+    400024: Stase
+    400026: //RootNode
+    400028: Support_Stase
+    2100000: lambert1
+    2300000: Cable2
+    2300002: Cable3
+    2300004: Cable_Support
+    2300006: Calbe1
+    2300008: Clavier
+    2300010: Clavier_Support
+    2300012: Ecran
+    2300014: Ecran_Support
+    2300016: Haut_Stase2
+    2300018: Haut_Staze1
+    2300020: Prise
+    2300022: Prise_Support
+    2300024: Stase
+    2300026: Support_Stase
+    3300000: Cable2
+    3300002: Cable3
+    3300004: Cable_Support
+    3300006: Calbe1
+    3300008: Clavier
+    3300010: Clavier_Support
+    3300012: Ecran
+    3300014: Ecran_Support
+    3300016: Haut_Stase2
+    3300018: Haut_Staze1
+    3300020: Prise
+    3300022: Prise_Support
+    3300024: Stase
+    3300026: Support_Stase
+    4300000: Support_Stase
+    4300002: Stase
+    4300004: Haut_Staze1
+    4300006: Haut_Stase2
+    4300008: Cable_Support
+    4300010: Cable3
+    4300012: Cable2
+    4300014: Calbe1
+    4300016: Ecran
+    4300018: Ecran_Support
+    4300020: Clavier_Support
+    4300022: Clavier
+    4300024: Prise_Support
+    4300026: Prise
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

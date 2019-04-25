@@ -31,18 +31,6 @@ public class NavClick : MonoBehaviour
             agent.destination = reticle;
             agent.isStopped = false;
         }
-
-
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //RaycastHit hit;
-        //if (Physics.Raycast(reticle, Camera.main.transform.forward, out hit, 100.0f))
-        //{
-        //Move to location that was hit with the raycast
-        //agent.destination = reticle;
-        //agent.isStopped = false;
-        //}
-        //}
     }
 
     public void ActivationButtonReleased()
