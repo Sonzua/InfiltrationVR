@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VRTK;
+
 
 public class SwitchArme : MonoBehaviour
 {
-    /*   
-    public enum switchArme
+    /*
+    public enum SwitchArme
     {
         Couteau,
         Pistolet,
@@ -13,12 +15,15 @@ public class SwitchArme : MonoBehaviour
         Main
     }
 
-    public switchArme type = switchArme.Main;
+    public SwitchArme type = SwitchArme.Main;
     */
 
     public GameObject couteau;
     public GameObject pistolet;
     public GameObject teleporteur;
+    public VRTK.VRTK_ControllerEvents controllerEvent;
+    
+
 
 
     // Start is called before the first frame update
@@ -33,9 +38,11 @@ public class SwitchArme : MonoBehaviour
         Inputprocess();
     }
 
-    private void Inputprocess()
+    public void Inputprocess()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+
+      
+        if (Input.GetKeyDown(KeyCode.LeftArrow) || controllerEvent.gripClicked)
         {
             
             couteau.SetActive(true);
@@ -45,7 +52,7 @@ public class SwitchArme : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow) || controllerEvent.gripPressed)
         {
             couteau.SetActive(false);
             pistolet.SetActive(true);
@@ -65,5 +72,7 @@ public class SwitchArme : MonoBehaviour
 
   
     }
+
+   
 
 }
