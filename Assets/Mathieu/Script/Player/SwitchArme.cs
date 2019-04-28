@@ -52,7 +52,7 @@ public class SwitchArme : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.RightArrow) || controllerEvent.gripPressed)
+        if (Input.GetKeyDown(KeyCode.RightArrow) /*|| controllerEvent.gripPressed*/)
         {
             couteau.SetActive(false);
             pistolet.SetActive(true);
