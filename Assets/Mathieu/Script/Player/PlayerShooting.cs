@@ -7,7 +7,7 @@ public class PlayerShooting : MonoBehaviour
     public float range = 100f;
     public VRTK.VRTK_ControllerEvents controllerEvent;
 
-    public int nombreMunition = 5;
+    public int nombreMunition = 10;
 
 
     float timer;

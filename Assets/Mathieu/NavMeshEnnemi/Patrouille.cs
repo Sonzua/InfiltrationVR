@@ -23,7 +23,7 @@ public class Patrouille : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        navMeshAgent = this.GetComponent<NavMeshAgent>();
+        navMeshAgent = GetComponent<NavMeshAgent>();
 
         if (navMeshAgent == null)
         {
@@ -43,7 +43,7 @@ public class Patrouille : MonoBehaviour
     void Update()
     {
         //Verifie si on est proche d'un waypoint
-        if(travelling && navMeshAgent.remainingDistance <= 1.0f)
+        if(travelling && navMeshAgent.remainingDistance <= 0.5f)
         {
             travelling = false;
 

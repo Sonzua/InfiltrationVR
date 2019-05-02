@@ -31,12 +31,21 @@ public class NavClick : MonoBehaviour
             agent.destination = reticle;
             agent.isStopped = false;
         }
+        else if (Nav == false)
+        {
+            agent.isStopped = true;
+        }
+
+
+    }
+
+    public void ActivationButtonPressed()
+    {
+        Nav = true;
     }
 
     public void ActivationButtonReleased()
     {
-        Vector3 reticle = pointer.pointerRenderer.GetDestinationHit().point;
-        agent.destination = reticle;
-        agent.isStopped = false;
+        Nav = false;
     }
 }

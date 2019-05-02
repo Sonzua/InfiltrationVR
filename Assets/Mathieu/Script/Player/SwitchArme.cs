@@ -20,7 +20,7 @@ public class SwitchArme : MonoBehaviour
 
     public GameObject couteau;
     public GameObject pistolet;
-    public GameObject teleporteur;
+    //public GameObject teleporteur;
     public VRTK.VRTK_ControllerEvents controllerEvent;
     
 
@@ -47,32 +47,32 @@ public class SwitchArme : MonoBehaviour
             
             couteau.SetActive(true);
             pistolet.SetActive(false);
-            teleporteur.SetActive(false);
-            
+            // teleporteur.SetActive(false);
+
 
         }
 
-        if (Input.GetKeyDown(KeyCode.RightArrow) /*|| controllerEvent.gripPressed*/)
+        if (Input.GetKeyDown(KeyCode.RightArrow) || controllerEvent.touchpadPressed)
         {
             couteau.SetActive(false);
             pistolet.SetActive(true);
-            teleporteur.SetActive(false);
+            // teleporteur.SetActive(false);
 
 
         }
 
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            couteau.SetActive(false);
-            pistolet.SetActive(false);
-            teleporteur.SetActive(true);
+        //if (Input.GetKeyDown(KeyCode.UpArrow))
+        // {
+        //couteau.SetActive(false);
+        //pistolet.SetActive(false);
+        //  teleporteur.SetActive(true);
 
 
-        }
+        //}
 
-  
+
     }
 
-   
+
 
 }

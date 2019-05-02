@@ -1,0 +1,186 @@
+fileFormatVersion: 2
+guid: f13f1dc4d3445734ea3deda3acbe6f25
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: pCube7
+    100002: Pillier01
+    100004: Pillier02
+    100006: Pillier03
+    100008: Pillier04
+    100010: Rambard
+    100012: Rambard1
+    100014: Rambard2
+    100016: Rambard3
+    100018: Rambard4
+    100020: Rambard5
+    100022: Rambard6
+    100024: Rambard7
+    100026: //RootNode
+    100028: Stairs1
+    100030: Stairs4
+    100032: Stairs5
+    100034: Stairs6
+    100036: Stairs7
+    400000: pCube7
+    400002: Pillier01
+    400004: Pillier02
+    400006: Pillier03
+    400008: Pillier04
+    400010: Rambard
+    400012: Rambard1
+    400014: Rambard2
+    400016: Rambard3
+    400018: Rambard4
+    400020: Rambard5
+    400022: Rambard6
+    400024: Rambard7
+    400026: //RootNode
+    400028: Stairs1
+    400030: Stairs4
+    400032: Stairs5
+    400034: Stairs6
+    400036: Stairs7
+    2100000: lambert1
+    2100002: blinn3
+    2100004: blinn2
+    2300000: pCube7
+    2300002: Pillier01
+    2300004: Pillier02
+    2300006: Pillier03
+    2300008: Pillier04
+    2300010: Rambard
+    2300012: Rambard1
+    2300014: Rambard2
+    2300016: Rambard3
+    2300018: Rambard4
+    2300020: Rambard5
+    2300022: Rambard6
+    2300024: Rambard7
+    2300026: Stairs1
+    2300028: Stairs4
+    2300030: Stairs5
+    2300032: Stairs6
+    2300034: Stairs7
+    3300000: pCube7
+    3300002: Pillier01
+    3300004: Pillier02
+    3300006: Pillier03
+    3300008: Pillier04
+    3300010: Rambard
+    3300012: Rambard1
+    3300014: Rambard2
+    3300016: Rambard3
+    3300018: Rambard4
+    3300020: Rambard5
+    3300022: Rambard6
+    3300024: Rambard7
+    3300026: Stairs1
+    3300028: Stairs4
+    3300030: Stairs5
+    3300032: Stairs6
+    3300034: Stairs7
+    4300000: Pillier01
+    4300002: Pillier02
+    4300004: Pillier03
+    4300006: Rambard7
+    4300008: Rambard6
+    4300010: Rambard5
+    4300012: Rambard4
+    4300014: Pillier04
+    4300016: Rambard
+    4300018: Stairs7
+    4300020: Stairs1
+    4300022: Rambard3
+    4300024: Rambard2
+    4300026: Rambard1
+    4300028: pCube7
+    4300030: Stairs5
+    4300032: Stairs6
+    4300034: Stairs4
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
