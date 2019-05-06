@@ -7,7 +7,7 @@ public class EnnemiMove : MonoBehaviour
 {
 
      public Transform destination;
-    NavMeshAgent navMeshAgent;
+     NavMeshAgent navMeshAgent;
 
     // Start is called before the first frame update
     void Start()

@@ -40,7 +40,7 @@ public class Door : MonoBehaviour
         {
             opening = true;
             closing = false;
-            Destroy(gameObject);
+            Destroy(Clé.gameObject);
         }
     }
     

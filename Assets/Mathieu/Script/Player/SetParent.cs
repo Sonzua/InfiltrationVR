@@ -10,12 +10,25 @@ public class SetParent : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        gameObject.transform.parent = parent.transform;
+        Parent();
     }
 
     // Update is called once per frame
     void Update()
     {
+        Updt();
+    }
+
+    public void Parent()
+    {
+        gameObject.transform.parent = parent.transform;
+    }
+
+    public void Updt()
+    {
         gameObject.transform.parent = parent.transform;
     }
 }
+
+
+
