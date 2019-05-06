@@ -23,7 +23,7 @@ public class Patrouille : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        navMeshAgent = this.GetComponent<NavMeshAgent>();
+        navMeshAgent = GetComponent<NavMeshAgent>();
 
         if (navMeshAgent == null)
         {
@@ -43,7 +43,7 @@ public class Patrouille : MonoBehaviour
     void Update()
     {
         //Verifie si on est proche d'un waypoint
-        if (travelling && navMeshAgent.remainingDistance <= 0.5f)
+        if(travelling && navMeshAgent.remainingDistance <= 0.5f)
         {
             travelling = false;
 
@@ -74,7 +74,7 @@ public class Patrouille : MonoBehaviour
 
     private void SetDestination()
     {
-        if (patrolPoints != null)
+        if(patrolPoints != null)
         {
             Vector3 targetVector = patrolPoints[currentPatrolIndex].transform.position; // Va vers le Waypoint de la liste le plus proche de lui
             navMeshAgent.SetDestination(targetVector);
@@ -84,7 +84,7 @@ public class Patrouille : MonoBehaviour
 
     private void ChangePatrolPoint()
     {
-        if (UnityEngine.Random.Range(0f, 1f) <= switchProbability)
+        if(UnityEngine.Random.Range(0f,1f) <= switchProbability)
         {
             patrolForward = !patrolForward;
         }
@@ -92,16 +92,16 @@ public class Patrouille : MonoBehaviour
         if (patrolForward)
         {
             currentPatrolIndex++;
-            if (currentPatrolIndex >= patrolPoints.Count)
+            if(currentPatrolIndex >= patrolPoints.Count)
             {
                 currentPatrolIndex = 0;
             }
-
+            
         }
         else
         {
             currentPatrolIndex--;
-            if (currentPatrolIndex < 0)
+            if(currentPatrolIndex < 0)
             {
                 currentPatrolIndex = patrolPoints.Count - 1;
             }
