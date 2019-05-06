@@ -35,8 +35,8 @@ namespace Valve.VR.InteractionSystem
 
 			//We're assuming the animation has a single clip, and that's the one we're
 			//going to scrub with the linear mapping.
-			animation.playAutomatically = true;
-			animState = animation[animation.clip.name];
+			//animation.playAutomatically = true;
+			//animState = animation[animation.clip.name];
 
 			//If the anim state's (i.e. clip's) wrap mode is Once (the default) or ClampForever,
 			//Unity will automatically stop playing the anim, regardless of subsequent changes

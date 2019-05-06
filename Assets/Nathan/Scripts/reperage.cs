@@ -7,39 +7,54 @@ using System;
 
 public class reperage : MonoBehaviour
 {
-    public bool repere = false;
-    public bool zone = false;
-    public Vector3 Objectif1;
-    public Vector3 Objectif2;
-    public Vector3 PlayerPos;
-    public Vector3 EnnemyHead;
-    public GameObject HeadL;
+    public bool repere = false;     //repéré par raycast
+    public bool zone = false;       //dans le champ de vision
+    Vector3 Objectif1;       //position tete1
+    Vector3 Objectif2;       //position tete2
+    Vector3 PlayerPos;       //pos finale NavMesh
+    public Vector3 EnnemyHead;      //pos ennemy
+    public GameObject EnnemyAnimRotation;
+
+    //-----------------> Partie Corps Joueur
+    public GameObject HeadL;        
     public GameObject HeadR;
+    public Collider headcolliderl;
+    public Collider headcolliderr;
+    //-----------------------------------//
+
     public GameObject Ennemy;
     public GameObject player;
     public float distance = 200f;
     public float timer = 0f;
     public NavMeshAgent agent;
-    bool cherche = false;
-    public Collider headcolliderl;
-    public Collider headcolliderr;
+    public bool cherche = false;
+
+    public Animation AnimScript;
+    public bool endnavmesh=false;
+    public GameObject ennemyall;
+    public Transform ennemypos;
+    public Animator EnnemyAnim;
+
+    int speed = 2;
+
 
     // Start is called before the first frame update
     void Start()
     {
-
+        AnimScript.GetComponent<Animator>();
     }
 
     // Update is called once per frame
-    
+
     void Update()
     {
+
         EnnemyHead = Ennemy.transform.position;
         Objectif1 = (HeadL.transform.position - EnnemyHead);
         Objectif2 = (HeadR.transform.position - EnnemyHead);
 
 
-        if (zone)
+            if (zone)
         {
             RaycastHit hit;
             if (Physics.Raycast(EnnemyHead, Objectif1, out hit, distance) || Physics.Raycast(EnnemyHead, Objectif2, out hit, distance))
@@ -53,13 +68,17 @@ public class reperage : MonoBehaviour
                     Debug.DrawRay(EnnemyHead, Objectif1 * distance, Color.red);
                     Debug.DrawRay(EnnemyHead, Objectif2 * distance, Color.red);
                     repere = true;
+                    
+
                 }
-                else if (!hit.collider == headcolliderl && !hit.collider == headcolliderr)
+                else
                 {
                     repere = false;
                 }
             }
         }
+
+
         else if (!zone)
         {
             repere = false;
@@ -67,36 +86,81 @@ public class reperage : MonoBehaviour
 
         if (repere == true)
         {
-
-
             if (timer >= 3)
             {
                 Debug.Log("Dead");
             }
 
-            if (timer >= 1)
+            if (timer >= 0.5)
             {
+                EnnemyAnimRotation.transform.localRotation = Quaternion.Lerp(EnnemyAnimRotation.transform.localRotation, Quaternion.identity,5*Time.deltaTime);
+
                 PlayerPos = player.transform.position;
                 cherche = true;
+                EnnemyAnim.enabled = false;
+                EnnemyAnim.SetBool("turn", false);  // ------------------------------------------------------ANIM !!! 
                 Debug.Log("walk");
             }
-                timer = timer + Time.deltaTime;
+            timer = timer + Time.deltaTime;
         }
 
         if (repere == false)
         {
             timer = 0;
-            cherche = false;
         }
 
         if (cherche == true)
         {
             agent.destination = PlayerPos;
         }
+
+
+        // ------------->  FinNavMesh
+
+        ennemypos = ennemyall.GetComponent<Transform>();
+        if (ennemypos.transform.position.x == PlayerPos.x && ennemypos.transform.position.z == PlayerPos.z && EnnemyAnim.enabled == false)
+        {
+            EndNav();
+        }
+
+        if (AnimScript.GetComponent<Animation>().endanim == true)
+        {
+            EndAnimEnnemy();
+        }
+
+        if (EnnemyAnim.GetBool("turn") == true)
+        {
+            
+            EnnemyAnim.enabled = false;
+            EnnemyAnim.SetBool("turn", false);
+            cherche = false;
+
+        }
     }
+
+    void EndNav()
+    {
+        endnavmesh = true;
+        EnnemyAnim.enabled = true;
+        EnnemyAnim.Play("turn", -1, 0f);
+    }
+
+    public void EndAnimEnnemy()
+    {
+       cherche = false;
+        EnnemyAnim.enabled = false;
+        PlayerPos = new Vector3(0,0,0);
+        endnavmesh = false;
+    }
+
+
+
+
+    // -------------------->  Entrée champ de vision
 
     void OnTriggerEnter(Collider other)
     {
+
         if (other.gameObject == HeadL || other.gameObject == HeadR)
         {
             zone = true;
@@ -109,5 +173,8 @@ public class reperage : MonoBehaviour
         {
             zone = false;
         }
-    } 
+    }
+    // -------------------->  End
+
+
 }
