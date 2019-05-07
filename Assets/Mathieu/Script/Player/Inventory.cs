@@ -30,13 +30,7 @@ public class Inventory : MonoBehaviour
             cleEnMain = true;
             cleDansInventaire = false;
         }
-        /*
-        else
-        {
-            cleEnMain = false;
-            cleDansInventaire = true;
-        }
-        */
+ 
         if (cleEnMain == true)
         {
             gameObject.GetComponent<VRTK_InteractGrab>().AttemptGrab();
@@ -62,10 +56,5 @@ public class Inventory : MonoBehaviour
 
     }
 
-    /*
-    public void ForceGrab()
-    {
-      gameObject.GetComponent<VRTK_InteractGrab>().ForceControllerAttachPoint(cleMag.GetComponent<Rigidbody>());
-    }
-    */
+
 }

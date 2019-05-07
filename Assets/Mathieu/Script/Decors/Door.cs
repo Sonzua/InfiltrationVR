@@ -6,9 +6,10 @@ public class Door : MonoBehaviour
 {
 
     public Transform door;
-    
 
+    public  DoorBas trigger;
     public bool opening = false;
+    
     public bool closing = false;
     public float speed = 0;
     public float maxOpenValue;
@@ -23,8 +24,9 @@ public class Door : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(opening == true )
+        if(opening == true && trigger.openingBas == true)
         {
+            Debug.Log(trigger.openingBas);
             OpenDoor();
         }
         if (closing == true)
@@ -40,12 +42,10 @@ public class Door : MonoBehaviour
         {
             opening = true;
             closing = false;
-            Destroy(Clé.gameObject);
+            
         }
     }
-    
 
-    
     void OpenDoor()
     {
         float movement = speed * Time.deltaTime;
