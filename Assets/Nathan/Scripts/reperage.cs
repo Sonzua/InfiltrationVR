@@ -7,6 +7,7 @@ using System;
 
 public class reperage : MonoBehaviour
 {
+
     public bool repere = false;     //repéré par raycast
     public bool zone = false;       //dans le champ de vision
     Vector3 Objectif1;       //position tete1
@@ -35,7 +36,9 @@ public class reperage : MonoBehaviour
     public Transform ennemypos;
     public Animator EnnemyAnim;
 
-    int speed = 2;
+    float morttimer = 2f;  //timer mort
+    float cherchetimer = 1f; //timer cherche
+
 
 
     // Start is called before the first frame update
@@ -48,6 +51,17 @@ public class reperage : MonoBehaviour
 
     void Update()
     {
+
+        GameManager.instance.timer = timer;
+
+        if (timer < 0)
+        {
+            timer = 0;
+        }
+        if (timer > 2)
+        {
+            timer = 2;
+        }
 
         EnnemyHead = Ennemy.transform.position;
         Objectif1 = (HeadL.transform.position - EnnemyHead);
@@ -86,12 +100,12 @@ public class reperage : MonoBehaviour
 
         if (repere == true)
         {
-            if (timer >= 3)
+            if (timer >= morttimer)
             {
                 Debug.Log("Dead");
             }
 
-            if (timer >= 0.5)
+            if (timer >= cherchetimer)
             {
                 EnnemyAnimRotation.transform.localRotation = Quaternion.Lerp(EnnemyAnimRotation.transform.localRotation, Quaternion.identity,5*Time.deltaTime);
 
@@ -101,12 +115,17 @@ public class reperage : MonoBehaviour
                 EnnemyAnim.SetBool("turn", false);  // ------------------------------------------------------ANIM !!! 
                 Debug.Log("walk");
             }
-            timer = timer + Time.deltaTime;
+            if (timer <= morttimer)
+            {
+                timer +=Time.deltaTime;
+
+            }
+
         }
 
-        if (repere == false)
+        if (repere == false && timer >=0)
         {
-            timer = 0;
+            timer -=Time.deltaTime;
         }
 
         if (cherche == true)
