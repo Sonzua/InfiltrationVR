@@ -6,7 +6,7 @@ public class PlayerShooting : MonoBehaviour
     public float timeBetweenBullets = 0.25f;
     public float range = 100f;
     public VRTK.VRTK_ControllerEvents controllerEvent;
-
+    public Inventory tir;
     public int nombreMunition = 10;
 
 
@@ -31,24 +31,26 @@ public class PlayerShooting : MonoBehaviour
     }
 
 
-    void Update ()
+    void Update()
     {
         timer += Time.deltaTime;
 
-		if((Input.GetButtonDown("Fire1") || controllerEvent.triggerTouched) && timer >= timeBetweenBullets && Time.timeScale != 0 && nombreMunition > 0)
+        if (tir.pistoletEnMain == true)
         {
-            
-            Debug.Log(nombreMunition);
-            Shoot();
-           
-        }
+            if ((Input.GetButtonDown("Fire1") || controllerEvent.triggerTouched) && timer >= timeBetweenBullets && Time.timeScale != 0 && nombreMunition > 0)
+            {
 
-        if(timer >= timeBetweenBullets * effectsDisplayTime)
-        {
-            DisableEffects ();
+                Debug.Log(nombreMunition);
+                Shoot();
+
+            }
+
+            if (timer >= timeBetweenBullets * effectsDisplayTime)
+            {
+                DisableEffects();
+            }
         }
     }
-
 
     public void DisableEffects ()
     {

@@ -2,19 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 using VRTK;
+using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-
+    //Utilisation VRTK
+    public VRTK.VRTK_ControllerEvents controllerEvent;
     
-    public bool cleDansInventaire = false;
-    public bool cleEnMain = false;
-    public GameObject cle;
-    public GameObject controller;
-    public VRTK_InteractableObject cleMag;
+    public VRTK_InteractableObject couteaux;
+    public VRTK_InteractableObject pistolets;
     public VRTK_InteractGrab rightHand;
-    public SetParent carte;
-    public bool frame = false;
+
+    //Variable Carte mAg
+    
+    public GameObject controller;
+    
+
+    // Variable Arme
+    public bool pistoletEnMain = false;
+    public bool pistoletInventaire = false;
+    public bool couteauEnMain = false;
+    public bool couteauInventaire = false;
+    public GameObject couteau;
+    public GameObject pistolet;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,37 +35,87 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if (cleMag.IsGrabbed(controller) == true)
+        //Vérification si grabbed
+        if(couteaux.IsGrabbed(controller) == true)
         {
-            cleEnMain = true;
-            cleDansInventaire = false;
+
+            couteauEnMain = true;
+            couteauInventaire = false;
         }
- 
-        if (cleEnMain == true)
+
+        if (pistolets.IsGrabbed(controller) == true)
+        {           
+            pistoletEnMain = true;
+            pistoletInventaire = false;
+        }
+
+        
+
+        //Mise dans inventaire
+
+        
+        
+        if(couteauEnMain == true || couteauInventaire == true)
         {
             gameObject.GetComponent<VRTK_InteractGrab>().AttemptGrab();
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.LeftArrow) || controllerEvent.gripClicked)
             {
-                cle.SetActive(false);
-                cleDansInventaire = true;
-                cleEnMain = false;
-                
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.Backspace) && cleDansInventaire == true)
-        {
-            cle.SetActive(true);
-            
-            cleDansInventaire = false;
-            cleEnMain = true;
-            
+                ToggleCouteau();
 
+            }
         }
         
 
 
+
+        if (pistoletEnMain == true || pistoletInventaire == true)
+        {
+            gameObject.GetComponent<VRTK_InteractGrab>().AttemptGrab();
+            
+            if (Input.GetKeyDown(KeyCode.RightArrow) || controllerEvent.touchpadPressed )
+            {
+                TogglePistolet();
+            }
+        }
+
+    }
+    
+    public void TogglePistolet()
+    {
+            Debug.Log(pistolet);
+            pistolet.SetActive(!pistolet.activeSelf);
+            
+            if (pistolet.activeSelf)
+            {
+                Debug.Log("Main");
+                pistoletEnMain = true;
+                pistoletInventaire = false;
+            }
+            if (!pistolet.activeSelf)
+            {
+                Debug.Log("Inventaire");
+                pistoletInventaire = true;
+                pistoletEnMain = false;
+            }
+        
     }
 
+    public void ToggleCouteau()
+    {
+        Debug.Log(couteau);
+        couteau.SetActive(!couteau.activeSelf);
+        
+        if (couteau.activeSelf)
+        {
+            couteauEnMain = true;
+            couteauInventaire = false;
+        }
+        if (!couteau.activeSelf)
+        {
+            couteauInventaire = true;
+            couteauEnMain = false;
+        }
+
+    }
 
 }
