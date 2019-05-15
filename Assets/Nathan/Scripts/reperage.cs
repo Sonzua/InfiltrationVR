@@ -125,7 +125,7 @@ public class reperage : MonoBehaviour
 
         if (repere == false && timer >=0)
         {
-            timer -=Time.deltaTime;
+            timer -=Time.deltaTime*0.5f;
         }
 
         if (cherche == true)

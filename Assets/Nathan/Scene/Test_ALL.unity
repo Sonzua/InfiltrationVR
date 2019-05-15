@@ -461,9 +461,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fe276d7b9733394abe266ce08b53265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  couteau: {fileID: 0}
-  pistolet: {fileID: 1348279641}
-  controllerEvent: {fileID: 109582313}
 --- !u!1 &137188541
 GameObject:
   m_ObjectHideFlags: 0
@@ -1965,6 +1962,7 @@ MonoBehaviour:
   timeBetweenBullets: 0.15
   range: 100
   controllerEvent: {fileID: 109582313}
+  tir: {fileID: 0}
   nombreMunition: 999
 --- !u!120 &548742118
 LineRenderer:
@@ -2436,12 +2434,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 587391655}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &588326564 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7160040243163655055, guid: 625102d0afee431418d4bea07137a738,
-    type: 3}
-  m_PrefabInstance: {fileID: 1143241022}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &588326574 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7160040243163655044, guid: 625102d0afee431418d4bea07137a738,
@@ -7167,6 +7159,7 @@ MonoBehaviour:
   timeBetweenBullets: 0.15
   range: 100
   controllerEvent: {fileID: 109582313}
+  tir: {fileID: 0}
   nombreMunition: 10
 --- !u!120 &1348279643
 LineRenderer:
@@ -7557,7 +7550,7 @@ PrefabInstance:
     - target: {fileID: 7029390734089231970, guid: 0b16b7c63caeb6444a281a63c224a8cd,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7029390734089231974, guid: 0b16b7c63caeb6444a281a63c224a8cd,
         type: 3}
@@ -8001,9 +7994,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fe276d7b9733394abe266ce08b53265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  couteau: {fileID: 588326564}
-  pistolet: {fileID: 548742115}
-  controllerEvent: {fileID: 109582313}
 --- !u!1 &1450705270 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100066, guid: 0724f88aac26fe946a565c0bda3eac61,

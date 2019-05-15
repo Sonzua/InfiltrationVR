@@ -18,6 +18,12 @@ public class Slider : MonoBehaviour
     string TextToShow = "hi";
 
     public float valuetoint;
+    public int value;
+    public RectTransform fillRect;
+    public object direction;
+
+    public Image targetGraphic { get; set; }
+    public static object Direction { get; set; }
 
     void Start()
     {
@@ -32,7 +38,7 @@ public class Slider : MonoBehaviour
 
         GetComponent<Image>().fillAmount = percent;
 
-        GetComponent<Image>().color = Color.Lerp(Color.green, Color.red, percent);
+        //GetComponent<Image>().color = Color.Lerp(Color.green, Color.red, percent);
 
         valuetoint = percent * 100;
 
