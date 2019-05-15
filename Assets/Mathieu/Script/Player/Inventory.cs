@@ -26,10 +26,14 @@ public class Inventory : MonoBehaviour
     public GameObject couteau;
     public GameObject pistolet;
 
+    public GameObject pistoletUI;
+    public GameObject couteauUI;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        couteauUI.SetActive(false);
+        pistoletUI.SetActive(false);
     }
 
     // Update is called once per frame
@@ -49,13 +53,12 @@ public class Inventory : MonoBehaviour
             pistoletInventaire = false;
         }
 
-        
 
         //Mise dans inventaire
 
-        
-        
-        if(couteauEnMain == true || couteauInventaire == true)
+
+
+        if (couteauEnMain == true || couteauInventaire == true)
         {
             gameObject.GetComponent<VRTK_InteractGrab>().AttemptGrab();
             if (Input.GetKeyDown(KeyCode.LeftArrow) || controllerEvent.gripClicked)
@@ -90,12 +93,15 @@ public class Inventory : MonoBehaviour
                 Debug.Log("Main");
                 pistoletEnMain = true;
                 pistoletInventaire = false;
+                pistoletUI.SetActive(false);
+
             }
             if (!pistolet.activeSelf)
             {
                 Debug.Log("Inventaire");
                 pistoletInventaire = true;
                 pistoletEnMain = false;
+                pistoletUI.SetActive(true);
             }
         
     }
@@ -107,6 +113,7 @@ public class Inventory : MonoBehaviour
         
         if (couteau.activeSelf)
         {
+            couteauUI.SetActive(false);
             couteauEnMain = true;
             couteauInventaire = false;
         }
@@ -114,6 +121,7 @@ public class Inventory : MonoBehaviour
         {
             couteauInventaire = true;
             couteauEnMain = false;
+            couteauUI.SetActive(true);
         }
 
     }
