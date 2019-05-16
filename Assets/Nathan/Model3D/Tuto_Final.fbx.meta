@@ -1,0 +1,254 @@
+fileFormatVersion: 2
+guid: 4facaad5a5e19f341828a0342f297413
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Cable2
+    100002: Cable2 1
+    100004: Cable3
+    100006: Cable3 1
+    100008: Cable_Support
+    100010: Cable_Support 1
+    100012: Cable_Support 2
+    100014: Calbe1
+    100016: Calbe1 1
+    100018: group1
+    100020: group2
+    100022: group3
+    100024: Groupe_tuyau
+    100026: Haut_Stase2
+    100028: Haut_Stase2 1
+    100030: Haut_Stase2 2
+    100032: Haut_Staze1
+    100034: Haut_Staze1 1
+    100036: Haut_Staze1 2
+    100038: Mur
+    100040: Prise
+    100042: Prise 1
+    100044: Prise 2
+    100046: Prise_Support
+    100048: Prise_Support 1
+    100050: Prise_Support 2
+    100052: Stase
+    100054: Stase 1
+    100056: Stase 2
+    100058: Support_Stase
+    100060: Support_Stase 1
+    100062: Support_Stase 2
+    100064: //RootNode
+    400000: Cable2
+    400002: Cable2 1
+    400004: Cable3
+    400006: Cable3 1
+    400008: Cable_Support
+    400010: Cable_Support 1
+    400012: Cable_Support 2
+    400014: Calbe1
+    400016: Calbe1 1
+    400018: group1
+    400020: group2
+    400022: group3
+    400024: Groupe_tuyau
+    400026: Haut_Stase2
+    400028: Haut_Stase2 1
+    400030: Haut_Stase2 2
+    400032: Haut_Staze1
+    400034: Haut_Staze1 1
+    400036: Haut_Staze1 2
+    400038: Mur
+    400040: Prise
+    400042: Prise 1
+    400044: Prise 2
+    400046: Prise_Support
+    400048: Prise_Support 1
+    400050: Prise_Support 2
+    400052: Stase
+    400054: Stase 1
+    400056: Stase 2
+    400058: Support_Stase
+    400060: Support_Stase 1
+    400062: Support_Stase 2
+    400064: //RootNode
+    2100000: lambert2
+    2100002: MH_L
+    2100004: MH_Cross1
+    2100006: MH_End2
+    2100008: MH_Cross2
+    2100010: MH_End
+    2100012: MH_End1
+    2100014: MH_straight2
+    2100016: MH_straight1
+    2300000: Cable2
+    2300002: Cable2 1
+    2300004: Cable3
+    2300006: Cable3 1
+    2300008: Cable_Support
+    2300010: Cable_Support 1
+    2300012: Cable_Support 2
+    2300014: Calbe1
+    2300016: Calbe1 1
+    2300018: Groupe_tuyau
+    2300020: Haut_Stase2
+    2300022: Haut_Stase2 1
+    2300024: Haut_Stase2 2
+    2300026: Haut_Staze1
+    2300028: Haut_Staze1 1
+    2300030: Haut_Staze1 2
+    2300032: Mur
+    2300034: Prise
+    2300036: Prise 1
+    2300038: Prise 2
+    2300040: Prise_Support
+    2300042: Prise_Support 1
+    2300044: Prise_Support 2
+    2300046: Stase
+    2300048: Stase 1
+    2300050: Stase 2
+    2300052: Support_Stase
+    2300054: Support_Stase 1
+    2300056: Support_Stase 2
+    3300000: Cable2
+    3300002: Cable2 1
+    3300004: Cable3
+    3300006: Cable3 1
+    3300008: Cable_Support
+    3300010: Cable_Support 1
+    3300012: Cable_Support 2
+    3300014: Calbe1
+    3300016: Calbe1 1
+    3300018: Groupe_tuyau
+    3300020: Haut_Stase2
+    3300022: Haut_Stase2 1
+    3300024: Haut_Stase2 2
+    3300026: Haut_Staze1
+    3300028: Haut_Staze1 1
+    3300030: Haut_Staze1 2
+    3300032: Mur
+    3300034: Prise
+    3300036: Prise 1
+    3300038: Prise 2
+    3300040: Prise_Support
+    3300042: Prise_Support 1
+    3300044: Prise_Support 2
+    3300046: Stase
+    3300048: Stase 1
+    3300050: Stase 2
+    3300052: Support_Stase
+    3300054: Support_Stase 1
+    3300056: Support_Stase 2
+    4300000: Prise
+    4300002: Prise_Support
+    4300004: Calbe1
+    4300006: Cable2
+    4300008: Cable3
+    4300010: Cable_Support
+    4300012: Haut_Stase2
+    4300014: Haut_Staze1
+    4300016: Stase
+    4300018: Support_Stase
+    4300020: Prise
+    4300022: Prise_Support
+    4300024: Calbe1
+    4300026: Cable2
+    4300028: Cable3
+    4300030: Cable_Support
+    4300032: Haut_Stase2
+    4300034: Haut_Staze1
+    4300036: Stase
+    4300038: Support_Stase
+    4300040: Prise
+    4300042: Prise_Support
+    4300044: Cable_Support
+    4300046: Haut_Stase2
+    4300048: Haut_Staze1
+    4300050: Stase
+    4300052: Support_Stase
+    4300054: Groupe_tuyau
+    4300056: Mur
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
