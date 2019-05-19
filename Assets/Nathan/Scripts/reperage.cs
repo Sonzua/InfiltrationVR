@@ -100,6 +100,14 @@ public class reperage : MonoBehaviour
 
         if (repere == true)
         {
+
+            if (timer >= 0.5f)
+            {
+
+                Vector3 difference = HeadL.transform.position - EnnemyAnimRotation.transform.position;
+                float rotationY = Mathf.Atan2(difference.x, difference.z) * Mathf.Rad2Deg;
+                EnnemyAnimRotation.transform.rotation = Quaternion.Lerp(EnnemyAnimRotation.transform.rotation,Quaternion.Euler(0.0f, rotationY, 0.0f), 5 * Time.deltaTime);
+            }
             if (timer >= morttimer)
             {
                 Debug.Log("Dead");
@@ -107,8 +115,7 @@ public class reperage : MonoBehaviour
 
             if (timer >= cherchetimer)
             {
-                EnnemyAnimRotation.transform.localRotation = Quaternion.Lerp(EnnemyAnimRotation.transform.localRotation, Quaternion.identity,5*Time.deltaTime);
-
+                //EnnemyAnimRotation.transform.localRotation = Quaternion.Lerp(EnnemyAnimRotation.transform.localRotation, Quaternion.identity, 5 * Time.deltaTime);
                 PlayerPos = player.transform.position;
                 cherche = true;
                 EnnemyAnim.enabled = false;
