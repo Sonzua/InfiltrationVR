@@ -261,6 +261,7 @@ GameObject:
   - component: {fileID: 189381101}
   - component: {fileID: 189381100}
   - component: {fileID: 189381099}
+  - component: {fileID: 189381105}
   - component: {fileID: 189381098}
   - component: {fileID: 189381104}
   m_Layer: 0
@@ -389,14 +390,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c89c9888deea394a9dde30390aee786, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &189381105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189381097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69f08c0c544feec4b989642b6f3f37c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   patrolWaiting: 0
   totalWaitTime: 3
   switchProbability: 0.2
   patrolPoints:
-  - {fileID: 1504703990}
   - {fileID: 978943438}
-  - {fileID: 180669173}
-  - {fileID: 1282654068}
+  - {fileID: 1504703990}
 --- !u!1 &567621267
 GameObject:
   m_ObjectHideFlags: 0

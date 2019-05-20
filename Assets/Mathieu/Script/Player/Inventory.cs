@@ -8,7 +8,7 @@ public class Inventory : MonoBehaviour
 {
     //Utilisation VRTK
     public VRTK.VRTK_ControllerEvents controllerEvent;
-    
+    public GameObject parents;
     public VRTK_InteractableObject couteaux;
     public VRTK_InteractableObject pistolets;
     public VRTK_InteractGrab rightHand;
@@ -42,13 +42,14 @@ public class Inventory : MonoBehaviour
         //Vérification si grabbed
         if(couteaux.IsGrabbed(controller) == true)
         {
-
+            gameObject.transform.parent = parents.transform;
             couteauEnMain = true;
             couteauInventaire = false;
         }
 
         if (pistolets.IsGrabbed(controller) == true)
-        {           
+        {
+            gameObject.transform.parent = parents.transform;
             pistoletEnMain = true;
             pistoletInventaire = false;
         }
@@ -58,25 +59,27 @@ public class Inventory : MonoBehaviour
 
 
 
-        if (couteauEnMain == true || couteauInventaire == true)
+        if (couteauEnMain == true || couteauInventaire == true && pistoletInventaire == true)
         {
             gameObject.GetComponent<VRTK_InteractGrab>().AttemptGrab();
             if (Input.GetKeyDown(KeyCode.LeftArrow) || controllerEvent.gripClicked)
             {
+                gameObject.transform.parent = parents.transform;
                 ToggleCouteau();
 
             }
         }
-        
 
 
 
-        if (pistoletEnMain == true || pistoletInventaire == true)
+
+        if (pistoletEnMain == true || pistoletInventaire == true && couteauInventaire == true) 
         {
             gameObject.GetComponent<VRTK_InteractGrab>().AttemptGrab();
             
             if (Input.GetKeyDown(KeyCode.RightArrow) || controllerEvent.touchpadPressed )
             {
+                gameObject.transform.parent = parents.transform;
                 TogglePistolet();
             }
         }
