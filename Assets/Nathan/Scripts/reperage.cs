@@ -51,8 +51,10 @@ public class reperage : MonoBehaviour
 
     void Update()
     {
-
-        GameManager.instance.timer = timer;
+        if (timer > 0)
+        {
+            GameManager.instance.timer = timer;
+        }
 
         if (timer < 0)
         {

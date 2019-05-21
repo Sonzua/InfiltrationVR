@@ -12,12 +12,7 @@ public class Inventory : MonoBehaviour
     public VRTK_InteractableObject couteaux;
     public VRTK_InteractableObject pistolets;
     public VRTK_InteractGrab rightHand;
-
-    //Variable Carte mAg
     
-    public GameObject controller;
-    
-
     // Variable Arme
     public bool pistoletEnMain = false;
     public bool pistoletInventaire = false;
@@ -40,16 +35,20 @@ public class Inventory : MonoBehaviour
     void Update()
     {
         //Vérification si grabbed
-        if(couteaux.IsGrabbed(controller) == true)
+        Debug.Log(couteaux.IsGrabbed(gameObject));
+        if (couteaux.IsGrabbed(gameObject))
         {
-            gameObject.transform.parent = parents.transform;
+            couteau.transform.parent = parents.transform;
+            couteau.transform.localRotation = parents.transform.localRotation;
             couteauEnMain = true;
             couteauInventaire = false;
         }
 
-        if (pistolets.IsGrabbed(controller) == true)
+        if (pistolets.IsGrabbed(gameObject))
         {
-            gameObject.transform.parent = parents.transform;
+
+            pistolet.transform.parent = parents.transform;
+            pistolet.transform.localRotation = parents.transform.localRotation;
             pistoletEnMain = true;
             pistoletInventaire = false;
         }
@@ -64,7 +63,9 @@ public class Inventory : MonoBehaviour
             gameObject.GetComponent<VRTK_InteractGrab>().AttemptGrab();
             if (Input.GetKeyDown(KeyCode.LeftArrow) || controllerEvent.gripClicked)
             {
-                gameObject.transform.parent = parents.transform;
+                couteau.transform.parent = parents.transform;
+                couteau.transform.localRotation = parents.transform.localRotation;
+
                 ToggleCouteau();
 
             }
@@ -79,7 +80,9 @@ public class Inventory : MonoBehaviour
             
             if (Input.GetKeyDown(KeyCode.RightArrow) || controllerEvent.touchpadPressed )
             {
-                gameObject.transform.parent = parents.transform;
+
+                pistolet.transform.parent = parents.transform;
+                pistolet.transform.localRotation = parents.transform.localRotation;
                 TogglePistolet();
             }
         }

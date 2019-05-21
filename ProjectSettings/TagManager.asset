@@ -15,6 +15,7 @@ TagManager:
   - Head
   - Ennemi
   - ennemybody
+  - couteau
   layers:
   - Default
   - TransparentFX
