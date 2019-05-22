@@ -26,6 +26,7 @@ public class Couteau : MonoBehaviour
         if (other.gameObject.CompareTag("Ennemi"))
         {
             Destroy(other.gameObject);
+            GameManager.instance.timer = 0;
         }
     }
 }

@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Nathan/Scene/Test_Ui.unity
-    guid: 291e2842f8c072e438e79fe11749b3d6
+    path: Assets/Nathan/Scene/Test Scale.unity
+    guid: a7563909e47a7814b81b23e727afce22
   m_configObjects: {}
