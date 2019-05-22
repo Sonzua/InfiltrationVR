@@ -23,7 +23,8 @@ public class DegatsSurEnnemi : MonoBehaviour
         {
 
             //if health has fallen below zero, deactivate it 
-
+            FindObjectOfType<AuidoManager>().Play("MortRobot");
+            FindObjectOfType<AuidoManager>().Play("Couteau");
             gameObject.SetActive(false);
 
         }

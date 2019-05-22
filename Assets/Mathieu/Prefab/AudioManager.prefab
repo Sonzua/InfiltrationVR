@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &219520473600159348
+--- !u!1 &4559391242374248465
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1702713205620699306}
-  - component: {fileID: 4868674594395973879}
+  - component: {fileID: 3165065420621342415}
+  - component: {fileID: 9213471102243864210}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -17,13 +17,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1702713205620699306
+--- !u!4 &3165065420621342415
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 219520473600159348}
+  m_GameObject: {fileID: 4559391242374248465}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -26.820127, y: 9.474856, z: -14.95941}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,70 +31,70 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4868674594395973879
+--- !u!114 &9213471102243864210
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 219520473600159348}
+  m_GameObject: {fileID: 4559391242374248465}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28923003293fa9a4ca96a66613fa4934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
+  - name: MortRobot
+    clip: {fileID: 8300000, guid: 9aca337deecc7cd4eb4d7efd411e6467, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Couteau
+    clip: {fileID: 8300000, guid: be9e0c935fa32ee498a40f497cacd94c, type: 3}
+    volume: 1
     pitch: 0
     loop: 0
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
+  - name: Pistolet
+    clip: {fileID: 8300000, guid: ec89c3b6516eaa241ab48f2231b16b77, type: 3}
+    volume: 1
     pitch: 0
     loop: 0
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
+  - name: Bouton
+    clip: {fileID: 8300000, guid: 3b01e37b7cbeb824c8bc64608d298c0c, type: 3}
+    volume: 1
     pitch: 0
     loop: 0
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
+  - name: CarteMag
+    clip: {fileID: 8300000, guid: be9e0c935fa32ee498a40f497cacd94c, type: 3}
+    volume: 1
     pitch: 0
     loop: 0
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
+  - name: Alerte
+    clip: {fileID: 8300000, guid: d4de871234a52fc4f91d7a9e55565996, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: MortJoueur
+    clip: {fileID: 8300000, guid: e3c5ad9cbeea6ba4ca256edcb1e7f3a4, type: 3}
+    volume: 1
     pitch: 0
     loop: 0
     source: {fileID: 0}
-  - name: 
+  - name: Porte
     clip: {fileID: 0}
-    volume: 0
+    volume: 1
     pitch: 0
     loop: 0
     source: {fileID: 0}
-  - name: 
+  - name: RobotMove
     clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    loop: 0
-    source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    loop: 0
-    source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
+    volume: 1
     pitch: 0
     loop: 0
     source: {fileID: 0}
