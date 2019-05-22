@@ -56,14 +56,14 @@ public class reperage : MonoBehaviour
             GameManager.instance.timer = timer;
         }
 
-        if (timer < 0)
+       /* if (timer < 0)
         {
             timer = 0;
         }
         if (timer > 2)
         {
             timer = 2;
-        }
+        }*/
 
         EnnemyHead = Ennemy.transform.position;
         Objectif1 = (HeadL.transform.position - EnnemyHead);
@@ -124,11 +124,10 @@ public class reperage : MonoBehaviour
                 EnnemyAnim.SetBool("turn", false);  // ------------------------------------------------------ANIM !!! 
                 Debug.Log("walk");
             }
-            if (timer <= morttimer)
-            {
-                timer +=Time.deltaTime;
+            
+            timer +=Time.deltaTime;
 
-            }
+            
 
         }
 
