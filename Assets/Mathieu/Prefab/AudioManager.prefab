@@ -51,7 +51,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Couteau
-    clip: {fileID: 8300000, guid: be9e0c935fa32ee498a40f497cacd94c, type: 3}
+    clip: {fileID: 8300000, guid: eec1175605baa4b4ca32292baad78b24, type: 3}
     volume: 1
     pitch: 0
     loop: 0
@@ -87,18 +87,18 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Porte
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: bb51e5dd627a48c4d9423a730617d70a, type: 3}
     volume: 1
     pitch: 0
     loop: 0
     source: {fileID: 0}
   - name: RobotMove
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 8dcccb3f0aa528f4b90a7d3dc65cd2c8, type: 3}
     volume: 1
     pitch: 0
     loop: 0
     source: {fileID: 0}
-  - name: 
+  - name: MusiqueJeu
     clip: {fileID: 0}
     volume: 0
     pitch: 0
