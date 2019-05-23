@@ -20,7 +20,7 @@ public class InventaireCle : MonoBehaviour
     public SetParent carte;
     public bool frame = false;
     public GameObject carteUI;
-
+    public GameObject parents;
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +32,7 @@ public class InventaireCle : MonoBehaviour
     void Update()
     {
         //Vérification si grabbed
-        
+
         if (cleMag.IsGrabbed(controller) == true)
         {
             cleEnMain = true;
@@ -45,25 +45,39 @@ public class InventaireCle : MonoBehaviour
         if (cleEnMain == true)
         {
             gameObject.GetComponent<VRTK_InteractGrab>().AttemptGrab();
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) || controllerEvent.gripClicked)
             {
-                cle.SetActive(false);
-                cleDansInventaire = true;
-                cleEnMain = false;
-                carteUI.SetActive(true);
+                cle.transform.parent = parents.transform;
+                cle.transform.localRotation = parents.transform.localRotation;
+                ToggleCarte();
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Backspace) && cleDansInventaire == true)
-        {
-            cle.SetActive(true);
 
-            cleDansInventaire = false;
-            cleEnMain = true;
-        }
 
-       
+
     }
 
+    public void ToggleCarte()
+    {
+        Debug.Log(cle);
+        cle.SetActive(!cle.activeSelf);
 
+        if (cle.activeSelf)
+        {
+            Debug.Log("Main");
+            cleEnMain = true;
+            cleDansInventaire = false;
+            carteUI.SetActive(false);
+
+        }
+        if (!cle.activeSelf)
+        {
+            Debug.Log("Inventaire");
+            cleDansInventaire = true;
+            cleEnMain = false;
+            carteUI.SetActive(true);
+        }
+
+    }
 }

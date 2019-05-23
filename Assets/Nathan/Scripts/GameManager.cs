@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public float timer;
     public bool Dead = false;
     public static GameManager instance = null;
+    public CameraFilterPack_FX_Glitch1 Glitch; 
 
     void Awake()
     {
@@ -26,6 +27,8 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+
+        Glitch.Glitch = timer / 3;
         if (timer > 5 && Dead ==false)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);

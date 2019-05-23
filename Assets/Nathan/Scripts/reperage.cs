@@ -136,7 +136,7 @@ public class reperage : MonoBehaviour
             timer -=Time.deltaTime*0.5f;
         }
 
-        if (cherche == true)
+        if (cherche == true && agent != null)
         {
             agent.destination = PlayerPos;
         }
