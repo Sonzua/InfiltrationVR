@@ -58,13 +58,13 @@ public class Inventory : MonoBehaviour
 
 
 
-        if (couteauEnMain == true || couteauInventaire == true && pistoletInventaire == true)
+        if (couteauEnMain == true || couteauInventaire == true)
         {
             gameObject.GetComponent<VRTK_InteractGrab>().AttemptGrab();
             if (Input.GetKeyDown(KeyCode.LeftArrow) || controllerEvent.gripClicked)
             {
-                couteau.transform.parent = parents.transform;
-                couteau.transform.localRotation = parents.transform.localRotation;
+                /*couteau.transform.parent = parents.transform;
+                couteau.transform.localRotation = parents.transform.localRotation;*/
 
                 ToggleCouteau();
 
