@@ -54,7 +54,7 @@ public class Door : MonoBehaviour
         currentValue += movement;
         if (currentValue <= maxOpenValue)
         {
-            door.position = new Vector3(door.position.x + movement, door.position.y, door.position.z);
+            door.position = new Vector3(door.position.x, door.position.y, door.position.z + movement);
         }
         else
         {

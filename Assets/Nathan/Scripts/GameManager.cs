@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
 
         if (timer > 5 && Dead ==false)
         {
+            FindObjectOfType<AuidoManager>().Play("MortJoueur");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             Dead = true;
             timer = 0;

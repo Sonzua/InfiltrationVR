@@ -21,6 +21,7 @@ public class EnnemiMove : MonoBehaviour
         else
         {
             SetDestination();
+            
         }
     }
 
@@ -28,8 +29,10 @@ public class EnnemiMove : MonoBehaviour
     {
         if(destination != null)
         {
+            
             Vector3 targetVector = destination.transform.position;
             navMeshAgent.SetDestination(targetVector);
+            FindObjectOfType<AuidoManager>().Play("RobotMove");
 
         }
     }

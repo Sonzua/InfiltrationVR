@@ -28,25 +28,28 @@ public class UIManager : MonoBehaviour
         if(menuActif == true)
         {
             pointer.enabled = false;
-           bezier.enabled = false;
+            bezier.enabled = false;
             straight.enabled = true;
         }
     }
 
     public void Jouer()
     {
+        FindObjectOfType<AuidoManager>().Play("Bouton");
         Debug.Log(menuActif);
         Debug.Log(FindObjectOfType<AuidoManager>());
         menuActif = false;
         menuPrincipal.SetActive(false);
-        FindObjectOfType<AuidoManager>().Play("Bouton");
-        //bezier.enabled = true;
-        //straight.enabled = false;
+        pointer.enabled = true;
+        bezier.enabled = true;
+        straight.enabled = false;
     }
 
     public void Quitter()
     {
         FindObjectOfType<AuidoManager>().Play("Bouton");
         Debug.Log(FindObjectOfType<AuidoManager>());
-        Application.Quit();    }
+        Application.Quit();
+    }
+
 }

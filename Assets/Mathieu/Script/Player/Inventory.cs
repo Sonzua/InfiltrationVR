@@ -29,6 +29,7 @@ public class Inventory : MonoBehaviour
     {
         couteauUI.SetActive(false);
         pistoletUI.SetActive(false);
+        //FindObjectOfType<AuidoManager>().Play("Pistolet"); Ligne test son
     }
 
     // Update is called once per frame
@@ -46,7 +47,7 @@ public class Inventory : MonoBehaviour
 
         if (pistolets.IsGrabbed(gameObject))
         {
-
+            Debug.Log("coucou");
             pistolet.transform.parent = parents.transform;
             pistolet.transform.localRotation = parents.transform.localRotation;
             pistoletEnMain = true;
@@ -58,7 +59,7 @@ public class Inventory : MonoBehaviour
 
 
 
-        if (couteauEnMain == true || couteauInventaire == true)
+        if ((couteauEnMain == true || couteauInventaire == true) && pistoletEnMain == false )
         {
             gameObject.GetComponent<VRTK_InteractGrab>().AttemptGrab();
             if (Input.GetKeyDown(KeyCode.LeftArrow) || controllerEvent.gripClicked)
@@ -74,7 +75,7 @@ public class Inventory : MonoBehaviour
 
 
 
-        if (pistoletEnMain == true || pistoletInventaire == true && couteauInventaire == true) 
+        if ((pistoletEnMain == true || pistoletInventaire == true) && couteauEnMain == false) 
         {
             gameObject.GetComponent<VRTK_InteractGrab>().AttemptGrab();
             

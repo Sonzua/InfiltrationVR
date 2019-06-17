@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Couteau : MonoBehaviour
 {
+    public bool sonJouer = false;
+    //public AudioSource couteau;
 
-    
-/*
     // Use this for initialization
     void Start()
     {
@@ -18,7 +18,6 @@ public class Couteau : MonoBehaviour
     {
         
     }
-*/
 
 
     private void OnTriggerEnter(Collider other)
@@ -26,7 +25,11 @@ public class Couteau : MonoBehaviour
         if (other.gameObject.CompareTag("Ennemi"))
         {
             Destroy(other.gameObject);
+            //couteau.Play();
+            FindObjectOfType<AuidoManager>().Play("Couteau");
             GameManager.instance.timer = 0;
+            FindObjectOfType<AuidoManager>().Play("MortRobot");
         }
     }
+    
 }

@@ -70,12 +70,18 @@ public class Patrouille : MonoBehaviour
                 SetDestination();
             }
         }
+        //Son de l'ennemis
+        if(travelling == true)
+        {
+           // FindObjectOfType<AuidoManager>().Play("RobotMove");
+        }
     }
 
     private void SetDestination()
     {
         if(patrolPoints != null)
         {
+
             Vector3 targetVector = patrolPoints[currentPatrolIndex].transform.position; // Va vers le Waypoint de la liste le plus proche de lui
             navMeshAgent.SetDestination(targetVector);
             travelling = true;

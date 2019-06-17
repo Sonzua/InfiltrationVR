@@ -46,11 +46,13 @@ public class Slider : MonoBehaviour
 
         if (valuetoint < 50)
         {
+            FindObjectOfType<AuidoManager>().Play("Alerte");
             GetComponent<Image>().color = new Color(0, 0.7f, 1);
         }
         if (valuetoint > 50)
         {
             GetComponent<Image>().color = new Color(1, 0.1f, 0);
+            
         }
 
 
@@ -60,6 +62,7 @@ public class Slider : MonoBehaviour
 
         if (valuetoint >= 0 && !(valuetoint > 100.99f ))
         {
+            
             TextDetection.text = TextToShow;
 
         }

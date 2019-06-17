@@ -53,37 +53,37 @@ MonoBehaviour:
   - name: Couteau
     clip: {fileID: 8300000, guid: eec1175605baa4b4ca32292baad78b24, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Pistolet
     clip: {fileID: 8300000, guid: ec89c3b6516eaa241ab48f2231b16b77, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Bouton
     clip: {fileID: 8300000, guid: 3b01e37b7cbeb824c8bc64608d298c0c, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: CarteMag
     clip: {fileID: 8300000, guid: be9e0c935fa32ee498a40f497cacd94c, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Alerte
     clip: {fileID: 8300000, guid: d4de871234a52fc4f91d7a9e55565996, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: MortJoueur
     clip: {fileID: 8300000, guid: e3c5ad9cbeea6ba4ca256edcb1e7f3a4, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Porte

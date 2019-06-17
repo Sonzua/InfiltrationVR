@@ -23,11 +23,10 @@ public class PlayerShooting : MonoBehaviour
 
     void Awake ()
     {
-        //shootableMask = LayerMask.GetMask ("Shootable");
-        //gunParticles = GetComponent<ParticleSystem> ();
+
         gunLine = GetComponent <LineRenderer> ();
         gunAudio = GetComponent<AudioSource> ();
-        //gunLight = GetComponent<Light> ();
+
     }
 
 
@@ -37,6 +36,7 @@ public class PlayerShooting : MonoBehaviour
 
         if (tir.pistoletEnMain == true)
         {
+            
             if ((Input.GetButtonDown("Fire1") || controllerEvent.triggerTouched) && timer >= timeBetweenBullets && Time.timeScale != 0 && nombreMunition > 0)
             {
 
@@ -55,7 +55,7 @@ public class PlayerShooting : MonoBehaviour
     public void DisableEffects ()
     {
         gunLine.enabled = false;
-        //gunLight.enabled = false;
+        
     }
 
 
@@ -65,10 +65,7 @@ public class PlayerShooting : MonoBehaviour
         nombreMunition --;
         FindObjectOfType<AuidoManager>().Play("Pistolet");
 
-        //gunLight.enabled = true;
 
-        //gunParticles.Stop ();
-        // gunParticles.Play ();
 
         gunLine.enabled = true;
         gunLine.SetPosition (0, transform.position);
