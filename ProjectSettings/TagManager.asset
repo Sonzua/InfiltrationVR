@@ -20,6 +20,7 @@ TagManager:
   - Miliru
   - Accroupi
   - RangerArme
+  - ChangementScene
   layers:
   - Default
   - TransparentFX

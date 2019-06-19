@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Nathan/Scene/Test Scale.unity
     guid: a7563909e47a7814b81b23e727afce22
+  - enabled: 1
+    path: Assets/Mathieu/Scene/Test_Ui 1.unity
+    guid: c0abf6cebc66ede409f1fbabc6505913
+  - enabled: 1
+    path: "Assets/Mathieu/Scene/Sc\xE8ne_Test/Porte_fonctionnelle_et_VR_Simulateur.unity"
+    guid: 14a7cec6596bb1a4b9a8df01338605b8
   m_configObjects: {}
