@@ -7,7 +7,8 @@ using System;
 
 public class reperage : MonoBehaviour
 {
-
+    public Collider view;
+    public bool stun = false;
     public bool repere = false;     //repéré par raycast
     public bool zone = false;       //dans le champ de vision
     Vector3 Objectif1;       //position tete1
@@ -30,7 +31,8 @@ public class reperage : MonoBehaviour
     public NavMeshAgent agent;
     public bool cherche = false;
 
-    public Animation AnimScript;
+
+    public GameObject AnimScript;
     public bool endnavmesh=false;
     public GameObject ennemyall;
     public Transform ennemypos;
@@ -44,7 +46,7 @@ public class reperage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        AnimScript.GetComponent<Animator>();
+        AnimScript.GetComponent<AnimationManager>();
     }
 
     // Update is called once per frame
@@ -56,152 +58,130 @@ public class reperage : MonoBehaviour
             GameManager.instance.timer = timer;
         }
 
-       /* if (timer < 0)
-        {
-            timer = 0;
-        }
-        if (timer > 2)
-        {
-            timer = 2;
-        }*/
+
 
         EnnemyHead = Ennemy.transform.position;
         Objectif1 = (HeadL.transform.position - EnnemyHead);
         Objectif2 = (HeadR.transform.position - EnnemyHead);
 
+        if (stun==false)
+        {
+
 
             if (zone)
-        {
-            RaycastHit hit;
-            if (Physics.Raycast(EnnemyHead, Objectif1, out hit, distance) || Physics.Raycast(EnnemyHead, Objectif2, out hit, distance))
             {
-                Debug.Log(hit.transform.name);
-                Debug.DrawRay(EnnemyHead, Objectif1 * distance, Color.yellow);
-                Debug.DrawRay(EnnemyHead, Objectif2 * distance, Color.yellow);
-
-                if (hit.collider == headcolliderl || hit.collider == headcolliderr)
+                RaycastHit hit;
+                if (Physics.Raycast(EnnemyHead, Objectif1, out hit, distance) || Physics.Raycast(EnnemyHead, Objectif2, out hit, distance))
                 {
-                    Debug.DrawRay(EnnemyHead, Objectif1 * distance, Color.red);
-                    Debug.DrawRay(EnnemyHead, Objectif2 * distance, Color.red);
-                    repere = true;
-                    
+                    Debug.Log(hit.transform.name);
+                    Debug.DrawRay(EnnemyHead, Objectif1 * distance, Color.yellow);
+                    Debug.DrawRay(EnnemyHead, Objectif2 * distance, Color.yellow);
 
-                }
-                else
-                {
-                    repere = false;
+                    if (hit.collider == headcolliderl || hit.collider == headcolliderr)
+                    {
+                        Debug.DrawRay(EnnemyHead, Objectif1 * distance, Color.red);
+                        Debug.DrawRay(EnnemyHead, Objectif2 * distance, Color.red);
+                        repere = true;
+
+
+                    }
+                    else
+                    {
+                        repere = false;
+                    }
                 }
             }
         }
-
 
         else if (!zone)
         {
             repere = false;
         }
 
-        if (repere == true)
+        if (stun == false)
         {
 
-            if (timer >= 0.5f)
+            if (repere == true)
             {
+                timer += Time.deltaTime;
 
-                Vector3 difference = HeadL.transform.position - EnnemyAnimRotation.transform.position;
-                float rotationY = Mathf.Atan2(difference.x, difference.z) * Mathf.Rad2Deg;
-                EnnemyAnimRotation.transform.rotation = Quaternion.Lerp(EnnemyAnimRotation.transform.rotation,Quaternion.Euler(0.0f, rotationY, 0.0f), 5 * Time.deltaTime);
+                if (timer >= 0.5f)
+                {
+
+                    Vector3 difference = HeadL.transform.position - EnnemyAnimRotation.transform.position;
+                    float rotationY = Mathf.Atan2(difference.x, difference.z) * Mathf.Rad2Deg;
+                    EnnemyAnimRotation.transform.rotation = Quaternion.Lerp(EnnemyAnimRotation.transform.rotation, Quaternion.Euler(0.0f, rotationY, 0.0f), 5 * Time.deltaTime);
+                }
+
+                if (timer >= cherchetimer)
+                {
+                    //EnnemyAnimRotation.transform.localRotation = Quaternion.Lerp(EnnemyAnimRotation.transform.localRotation, Quaternion.identity, 5 * Time.deltaTime);
+                    PlayerPos = player.transform.position;
+                    cherche = true;
+                    //EnnemyAnim.enabled = false;
+                }
+                else
+                {
+                    cherche = false;
+                }
+
+                if (timer >= morttimer)
+                {
+
+                }
+
             }
-            if (timer >= morttimer)
-            {
-                Debug.Log("Dead");
-            }
-
-            if (timer >= cherchetimer)
-            {
-                //EnnemyAnimRotation.transform.localRotation = Quaternion.Lerp(EnnemyAnimRotation.transform.localRotation, Quaternion.identity, 5 * Time.deltaTime);
-                PlayerPos = player.transform.position;
-                cherche = true;
-                EnnemyAnim.enabled = false;
-                EnnemyAnim.SetBool("turn", false);  // ------------------------------------------------------ANIM !!! 
-                Debug.Log("walk");
-            }
-            
-            timer +=Time.deltaTime;
-
-            
-
         }
 
-        if (repere == false && timer >=0)
+        if (timer < cherchetimer)
         {
-            timer -=Time.deltaTime*0.5f;
+            cherche = false;
         }
 
-        if (cherche == true && agent != null)
+        if (repere == false || stun ==true)
         {
-            agent.destination = PlayerPos;
+            if (timer >= 0)
+            {
+                timer -= Time.deltaTime * 0.5f;
+            }
         }
 
+        if (stun == false)
+        {
+
+            if (cherche == true && agent != null)
+            {
+                agent.destination = PlayerPos;
+                if (Vector3.Distance(agent.destination, agent.transform.position) <= agent.stoppingDistance)
+                {
+                    if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
+                    {
+                        Debug.Log("endnavmesh");
+                        EnnemyAnim.SetBool("turn", true);
+                        endnavmesh = false;
+                    }
+                }
+            }
+        }
 
         // ------------->  FinNavMesh
 
-        ennemypos = ennemyall.GetComponent<Transform>();
-        if (ennemypos.transform.position.x == PlayerPos.x && ennemypos.transform.position.z == PlayerPos.z && EnnemyAnim.enabled == false)
-        {
-            EndNav();
-        }
-
-        if (AnimScript.GetComponent<Animation>().endanim == true)
-        {
-            EndAnimEnnemy();
-        }
 
         if (EnnemyAnim.GetBool("turn") == true)
         {
-            
-            EnnemyAnim.enabled = false;
-            EnnemyAnim.SetBool("turn", false);
-            cherche = false;
-
+            //EnnemyAnim.enabled = false;
         }
     }
 
     void EndNav()
     {
         endnavmesh = true;
-        EnnemyAnim.enabled = true;
         EnnemyAnim.Play("turn", -1, 0f);
     }
 
     public void EndAnimEnnemy()
     {
-       cherche = false;
-        EnnemyAnim.enabled = false;
-        PlayerPos = new Vector3(0,0,0);
-        endnavmesh = false;
-    }
 
-
-
-
-    // -------------------->  Entrée champ de vision
-
-    void OnTriggerEnter(Collider other)
-    {
-
-        if (other.gameObject == HeadL || other.gameObject == HeadR)
-        {
-            zone = true;
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject == HeadL || other.gameObject == HeadR)
-        {
-            zone = false;
-        }
     }
     // -------------------->  End
-
-
 }

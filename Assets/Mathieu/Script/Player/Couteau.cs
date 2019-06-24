@@ -24,7 +24,7 @@ public class Couteau : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ennemi"))
         {
-            Destroy(other.gameObject);
+            other.GetComponent<reperage>().stun = true;
             //couteau.Play();
             FindObjectOfType<AuidoManager>().Play("Couteau");
             GameManager.instance.timer = 0;
