@@ -2877,6 +2877,7 @@ GameObject:
   m_Component:
   - component: {fileID: 358838127}
   - component: {fileID: 358838128}
+  - component: {fileID: 358838129}
   m_Layer: 0
   m_Name: SteamVR
   m_TagString: Untagged
@@ -2941,6 +2942,18 @@ MonoBehaviour:
     fallbackTypeName: VRTK.SDK_FallbackController
     typeName: VRTK.SDK_SteamVRController
     descriptionIndex: 0
+--- !u!114 &358838129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358838126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ad1e469d4e3e04489f9a36419f1a4f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &360301862
 GameObject:
   m_ObjectHideFlags: 0
@@ -23842,7 +23855,7 @@ GameObject:
   - component: {fileID: 1743573425}
   - component: {fileID: 1743573427}
   - component: {fileID: 1743573426}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: testFade
   m_TagString: ChangementScene
   m_Icon: {fileID: 0}
@@ -23857,7 +23870,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1743573424}
   m_LocalRotation: {x: -0, y: 0.68418294, z: -0, w: 0.72931045}
-  m_LocalPosition: {x: -115.99, y: -1.7, z: -67}
+  m_LocalPosition: {x: 2.78, y: -1.7, z: -4.4}
   m_LocalScale: {x: 15.912, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 182423606}
@@ -33113,7 +33126,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2108933053}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2108933062
+--- !u!114 &2108933061
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -33206,6 +33219,18 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2108933055}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ad1e469d4e3e04489f9a36419f1a4f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2108933081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108933060}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ad1e469d4e3e04489f9a36419f1a4f8, type: 3}
   m_Name: 
@@ -33616,7 +33641,7 @@ PrefabInstance:
     - target: {fileID: 1076643383985888054, guid: fd08d783d6fd2af46b57467a148bd05b,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1076643383985888055, guid: fd08d783d6fd2af46b57467a148bd05b,
         type: 3}

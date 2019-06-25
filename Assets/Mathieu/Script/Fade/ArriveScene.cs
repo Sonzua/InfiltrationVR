@@ -5,15 +5,15 @@ using UnityEngine;
 public class ArriveScene : MonoBehaviour
 {
     [SerializeField] Fade fade;
-    private float _fadeDuration = 1f;
+    private float _fadeDuration = 2f;
 
     // Start is called before the first frame update
     void Start()
     {
         //set and start fade to
-        SteamVR_Fade.Start(Color.black, _fadeDuration);
+        SteamVR_Fade.View(Color.black, _fadeDuration);
 
-        SteamVR_Fade.Start(Color.clear, 0f);
+        SteamVR_Fade.View(Color.clear, _fadeDuration);
     }
 
     // Update is called once per frame
