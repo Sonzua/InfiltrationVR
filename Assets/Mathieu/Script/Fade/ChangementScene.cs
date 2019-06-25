@@ -7,8 +7,10 @@ using UnityEngine.SceneManagement;
 public class ChangementScene : MonoBehaviour
 {
     [SerializeField] Fade fade;
-    private float _fadeDuration = 1f;
+    private float _fadeDuration = 2f;
     public string sceneToLoad;
+    bool changement;
+    float Timer;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +21,16 @@ public class ChangementScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (changement)
+        {
+            Timer += Time.deltaTime;
+            if(Timer>=_fadeDuration)
+            {
+               SceneManager.LoadScene(sceneToLoad);
+
+
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -27,10 +38,11 @@ public class ChangementScene : MonoBehaviour
         if (other.gameObject.CompareTag("ChangementScene"))
         {
             Debug.Log("Changement");
-            SteamVR_Fade.Start(Color.clear, 0f);
-            //set and start fade to
-            SteamVR_Fade.Start(Color.black, _fadeDuration);
-            SceneManager.LoadScene(sceneToLoad);
+            //SteamVR_Fade.Start(Color.clear, 0f);
+            
+            SteamVR_Fade.View(Color.black, _fadeDuration);
+            Debug.Log("Fondu");
+            changement = true;
             //fade.FadeOut();
         }
     }
