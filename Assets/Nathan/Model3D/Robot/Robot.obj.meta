@@ -1,0 +1,201 @@
+fileFormatVersion: 2
+guid: b8537345b113d2d46a016e551c28d704
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Armor_Robot
+    100002: //RootNode
+    100004: Robot_Body
+    100006: Robot_Corne5
+    100008: Robot_Corne6
+    100010: Robot_Doigt01
+    100012: Robot_Doigt02
+    100014: Robot_Doigt03
+    100016: Robot_Doigt04
+    100018: Robot_Doigt05
+    100020: Robot_Doigt06
+    100022: Robot_Griffe01
+    100024: Robot_Griffe02
+    100026: Robot_Oeil
+    100028: Robot_Oeil_Support
+    100030: Robot_robot_01
+    100032: Robot_robot_02
+    100034: Robot_robot_04
+    100036: Robot_Tete
+    400000: Armor_Robot
+    400002: //RootNode
+    400004: Robot_Body
+    400006: Robot_Corne5
+    400008: Robot_Corne6
+    400010: Robot_Doigt01
+    400012: Robot_Doigt02
+    400014: Robot_Doigt03
+    400016: Robot_Doigt04
+    400018: Robot_Doigt05
+    400020: Robot_Doigt06
+    400022: Robot_Griffe01
+    400024: Robot_Griffe02
+    400026: Robot_Oeil
+    400028: Robot_Oeil_Support
+    400030: Robot_robot_01
+    400032: Robot_robot_02
+    400034: Robot_robot_04
+    400036: Robot_Tete
+    2100000: Armor_RobotMat
+    2100002: Robot_BodyMat
+    2100004: Robot_Corne5Mat
+    2100006: Robot_Corne6Mat
+    2100008: Robot_Doigt01Mat
+    2100010: Robot_Doigt02Mat
+    2100012: Robot_Doigt03Mat
+    2100014: Robot_Doigt04Mat
+    2100016: Robot_Doigt05Mat
+    2100018: Robot_Doigt06Mat
+    2100020: Robot_Griffe01Mat
+    2100022: Robot_Griffe02Mat
+    2100024: Robot_OeilMat
+    2100026: Robot_Oeil_SupportMat
+    2100028: Robot_robot_01Mat
+    2100030: Robot_robot_02Mat
+    2100032: Robot_robot_04Mat
+    2100034: Robot_TeteMat
+    2300000: Armor_Robot
+    2300002: Robot_Body
+    2300004: Robot_Corne5
+    2300006: Robot_Corne6
+    2300008: Robot_Doigt01
+    2300010: Robot_Doigt02
+    2300012: Robot_Doigt03
+    2300014: Robot_Doigt04
+    2300016: Robot_Doigt05
+    2300018: Robot_Doigt06
+    2300020: Robot_Griffe01
+    2300022: Robot_Griffe02
+    2300024: Robot_Oeil
+    2300026: Robot_Oeil_Support
+    2300028: Robot_robot_01
+    2300030: Robot_robot_02
+    2300032: Robot_robot_04
+    2300034: Robot_Tete
+    3300000: Armor_Robot
+    3300002: Robot_Body
+    3300004: Robot_Corne5
+    3300006: Robot_Corne6
+    3300008: Robot_Doigt01
+    3300010: Robot_Doigt02
+    3300012: Robot_Doigt03
+    3300014: Robot_Doigt04
+    3300016: Robot_Doigt05
+    3300018: Robot_Doigt06
+    3300020: Robot_Griffe01
+    3300022: Robot_Griffe02
+    3300024: Robot_Oeil
+    3300026: Robot_Oeil_Support
+    3300028: Robot_robot_01
+    3300030: Robot_robot_02
+    3300032: Robot_robot_04
+    3300034: Robot_Tete
+    4300000: Armor_Robot
+    4300002: Robot_Body
+    4300004: Robot_Corne5
+    4300006: Robot_Corne6
+    4300008: Robot_Doigt01
+    4300010: Robot_Doigt02
+    4300012: Robot_Doigt03
+    4300014: Robot_Doigt04
+    4300016: Robot_Doigt05
+    4300018: Robot_Doigt06
+    4300020: Robot_Griffe01
+    4300022: Robot_Griffe02
+    4300024: Robot_Oeil
+    4300026: Robot_Oeil_Support
+    4300028: Robot_robot_01
+    4300030: Robot_robot_02
+    4300032: Robot_robot_04
+    4300034: Robot_Tete
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

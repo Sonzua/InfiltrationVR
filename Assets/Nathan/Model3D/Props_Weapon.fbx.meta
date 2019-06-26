@@ -1,0 +1,151 @@
+fileFormatVersion: 2
+guid: 7ae71b99d724a02479244a58677faf16
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Ecran
+    100004: Energie_01
+    100006: Energie_02
+    100008: Energie_03
+    100010: Energie_04
+    100012: pCylinder3
+    100014: //RootNode
+    100016: Tuyau_01
+    100018: Tuyau_02
+    100020: Tuyau_03
+    100022: Tuyau_04
+    400000: Armature
+    400002: Ecran
+    400004: Energie_01
+    400006: Energie_02
+    400008: Energie_03
+    400010: Energie_04
+    400012: pCylinder3
+    400014: //RootNode
+    400016: Tuyau_01
+    400018: Tuyau_02
+    400020: Tuyau_03
+    400022: Tuyau_04
+    2100000: lambert1
+    2100002: lambert2
+    2300000: Armature
+    2300002: Ecran
+    2300004: Energie_01
+    2300006: Energie_02
+    2300008: Energie_03
+    2300010: Energie_04
+    2300012: pCylinder3
+    2300014: Tuyau_01
+    2300016: Tuyau_02
+    2300018: Tuyau_03
+    2300020: Tuyau_04
+    3300000: Armature
+    3300002: Ecran
+    3300004: Energie_01
+    3300006: Energie_02
+    3300008: Energie_03
+    3300010: Energie_04
+    3300012: pCylinder3
+    3300014: Tuyau_01
+    3300016: Tuyau_02
+    3300018: Tuyau_03
+    3300020: Tuyau_04
+    4300000: pCylinder3
+    4300002: Armature
+    4300004: Ecran
+    4300006: Energie_01
+    4300008: Tuyau_01
+    4300010: Tuyau_02
+    4300012: Energie_02
+    4300014: Energie_03
+    4300016: Tuyau_03
+    4300018: Energie_04
+    4300020: Tuyau_04
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

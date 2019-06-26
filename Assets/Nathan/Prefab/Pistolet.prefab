@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1725044219355030906}
   - component: {fileID: 8538261062815906577}
   - component: {fileID: 8538261062815906576}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Pistolet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,8 +51,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.33918798, y: 0.2752775, z: 0.17017841}
-  m_Center: {x: -0.001553461, y: 0.056737646, z: -0.00018072128}
+  m_Size: {x: 0.13463159, y: 0.2752775, z: 0.34357452}
+  m_Center: {x: 0.01068113, y: 0.056737646, z: 0.086517334}
 --- !u!114 &1725044219355030886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,7 +287,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8538261061359187682}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GunEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -302,7 +302,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8538261061359187693}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.1471, y: 0.0455, z: 0}
+  m_LocalPosition: {x: 0, y: 0.0358, z: 0.244}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1725044219355030907}
@@ -318,6 +318,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: cbc4a6ff4e84bdf48b0b24376f6f0382, type: 3}
       propertyPath: m_Name
       value: Px_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cbc4a6ff4e84bdf48b0b24376f6f0382, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cbc4a6ff4e84bdf48b0b24376f6f0382, type: 3}
       propertyPath: m_LocalPosition.x

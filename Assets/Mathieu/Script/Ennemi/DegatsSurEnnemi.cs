@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.AI;
 
 public class DegatsSurEnnemi : MonoBehaviour
 {
@@ -7,7 +8,7 @@ public class DegatsSurEnnemi : MonoBehaviour
     //The box's current health point total
 
     public int currentHealth = 1;
-
+    public Animator Anim;
     public void Damage(int damageAmount)
 
     {
@@ -25,9 +26,10 @@ public class DegatsSurEnnemi : MonoBehaviour
             //if health has fallen below zero, deactivate it 
             FindObjectOfType<AuidoManager>().Play("Pistolet");
             GameManager.instance.timer = 0;
-            Destroy(gameObject);
+            Destroy(gameObject.GetComponent<reperage>());
+            Destroy(gameObject.GetComponent<NavMeshAgent>());
             FindObjectOfType<AuidoManager>().Play("MortRobot");
-
+            Anim.SetBool("dead", true);
         }
 
     }

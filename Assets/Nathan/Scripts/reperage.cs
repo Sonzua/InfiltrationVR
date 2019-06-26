@@ -7,6 +7,7 @@ using System;
 
 public class reperage : MonoBehaviour
 {
+    public float stuntimer;
     public Collider view;
     public bool stun = false;
     public bool repere = false;     //repéré par raycast
@@ -41,7 +42,8 @@ public class reperage : MonoBehaviour
     float morttimer = 2f;  //timer mort
     float cherchetimer = 1f; //timer cherche
 
-
+    public float timeranim;
+    public int luck;
 
     // Start is called before the first frame update
     void Start()
@@ -59,14 +61,51 @@ public class reperage : MonoBehaviour
         }
 
 
-
         EnnemyHead = Ennemy.transform.position;
         Objectif1 = (HeadL.transform.position - EnnemyHead);
         Objectif2 = (HeadR.transform.position - EnnemyHead);
 
+
+        if (stun == true)
+        {
+            EnnemyAnim.SetBool("dead", true);
+            EnnemyAnim.SetBool("turn", false);
+            stuntimer += Time.deltaTime;
+            if (stuntimer >= 5)
+            {
+                EnnemyAnim.SetBool("dead", false);
+                stun = false;
+                stuntimer = 0;
+            }
+        }
         if (stun==false)
         {
 
+            timeranim += Time.deltaTime;
+
+            if(timeranim >= 3 && timer<cherchetimer)
+            {
+                luck = UnityEngine.Random.Range(1, 5);
+                if (luck <= 1)
+                {
+                    EnnemyAnim.SetBool("wait1", true);
+                    timeranim = 0;
+                }
+                if (luck > 2)
+                {
+                    EnnemyAnim.SetBool("wait2", true);
+                    timeranim = 0;
+                }
+                else
+                {
+                    timeranim = 0;
+                }
+            }
+            if (timeranim >= 1 && timeranim<=3)
+            {
+                EnnemyAnim.SetBool("wait2", false);
+                EnnemyAnim.SetBool("wait1", false);
+            }
 
             if (zone)
             {
@@ -93,7 +132,7 @@ public class reperage : MonoBehaviour
             }
         }
 
-        else if (!zone)
+        if (!zone)
         {
             repere = false;
         }
@@ -103,7 +142,10 @@ public class reperage : MonoBehaviour
 
             if (repere == true)
             {
-                timer += Time.deltaTime;
+                if(timer <= morttimer)
+                {
+                    timer += Time.deltaTime;
+                }
 
                 if (timer >= 0.5f)
                 {
@@ -133,9 +175,9 @@ public class reperage : MonoBehaviour
             }
         }
 
-        if (timer < cherchetimer)
+        //if (timer < cherchetimer)
         {
-            cherche = false;
+           // cherche = false;
         }
 
         if (repere == false || stun ==true)
@@ -149,16 +191,19 @@ public class reperage : MonoBehaviour
         if (stun == false)
         {
 
-            if (cherche == true && agent != null)
+            if (cherche == true)
             {
                 agent.destination = PlayerPos;
                 if (Vector3.Distance(agent.destination, agent.transform.position) <= agent.stoppingDistance)
+
+                //if (Vector3.Distance(agent.destination, agent.transform.position) <= agent.stoppingDistance)
                 {
                     if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
                     {
                         Debug.Log("endnavmesh");
                         EnnemyAnim.SetBool("turn", true);
                         endnavmesh = false;
+                        cherche = false;
                     }
                 }
             }

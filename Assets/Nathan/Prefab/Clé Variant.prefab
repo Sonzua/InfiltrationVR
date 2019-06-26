@@ -10,22 +10,27 @@ PrefabInstance:
     - target: {fileID: 4718670342692914414, guid: 1b08fc3395d2a6045a936548d2e88660,
         type: 3}
       propertyPath: m_Name
-      value: "Cl\xE9"
+      value: "Cl\xE9 Variant"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4718670342692914409, guid: 1b08fc3395d2a6045a936548d2e88660,
+        type: 3}
+      propertyPath: grabOverrideButton
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4718670342692914405, guid: 1b08fc3395d2a6045a936548d2e88660,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -116.85
+      value: -3.7
       objectReference: {fileID: 0}
     - target: {fileID: 4718670342692914405, guid: 1b08fc3395d2a6045a936548d2e88660,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.01
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4718670342692914405, guid: 1b08fc3395d2a6045a936548d2e88660,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -59.18
+      value: -8.16
       objectReference: {fileID: 0}
     - target: {fileID: 4718670342692914405, guid: 1b08fc3395d2a6045a936548d2e88660,
         type: 3}

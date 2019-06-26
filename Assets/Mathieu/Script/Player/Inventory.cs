@@ -20,7 +20,7 @@ public class Inventory : MonoBehaviour
     public bool couteauInventaire = false;
     public GameObject couteau;
     public GameObject pistolet;
-
+    float timer = 0;
     public GameObject pistoletUI;
     public GameObject couteauUI;
 
@@ -37,6 +37,8 @@ public class Inventory : MonoBehaviour
     {
         //Vérification si grabbed
         Debug.Log(couteaux.IsGrabbed(gameObject));
+        timer += Time.deltaTime;
+
         if (couteaux.IsGrabbed(gameObject))
         {
             couteau.transform.parent = parents.transform;
@@ -59,23 +61,24 @@ public class Inventory : MonoBehaviour
 
 
 
-        if ((couteauEnMain == true || couteauInventaire == true) && pistoletEnMain == false )
+        if ((couteauEnMain == true || couteauInventaire == true) && pistoletEnMain == false && timer>0.2f)
         {
             gameObject.GetComponent<VRTK_InteractGrab>().AttemptGrab();
+            
             if (Input.GetKeyDown(KeyCode.LeftArrow) || controllerEvent.gripClicked)
             {
-                /*couteau.transform.parent = parents.transform;
-                couteau.transform.localRotation = parents.transform.localRotation;*/
+                couteau.transform.parent = parents.transform;
+                couteau.transform.localRotation = parents.transform.localRotation;
 
                 ToggleCouteau();
-
+                timer = 0;
             }
         }
 
 
 
 
-        if ((pistoletEnMain == true || pistoletInventaire == true) && couteauEnMain == false) 
+        if ((pistoletEnMain == true || pistoletInventaire == true) && couteauEnMain == false && timer > 0.2f) 
         {
             gameObject.GetComponent<VRTK_InteractGrab>().AttemptGrab();
             
@@ -85,6 +88,8 @@ public class Inventory : MonoBehaviour
                 pistolet.transform.parent = parents.transform;
                 pistolet.transform.localRotation = parents.transform.localRotation;
                 TogglePistolet();
+                timer = 0;
+
             }
         }
 

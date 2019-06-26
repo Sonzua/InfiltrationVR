@@ -4,12 +4,21 @@ ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Armature2
+    100004: Verre
     400000: //RootNode
+    400002: Armature2
+    400004: Verre
     2100000: lambert2
     2100002: lambert1
     2300000: //RootNode
+    2300002: Armature2
+    2300004: Verre
     3300000: //RootNode
+    3300002: Armature2
+    3300004: Verre
     4300000: Armature2
+    4300002: Verre
   externalObjects: {}
   materials:
     importMaterials: 1
