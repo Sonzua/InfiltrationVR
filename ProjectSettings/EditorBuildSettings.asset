@@ -6,12 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Nathan/Scene/Test Scale.unity
-    guid: a7563909e47a7814b81b23e727afce22
+    path: Assets/Nathan/Scene/Tuto Final.unity
+    guid: b680c6c703a04ab4f91722664573cbce
   - enabled: 1
-    path: Assets/Mathieu/Scene/Test_Ui 1.unity
-    guid: c0abf6cebc66ede409f1fbabc6505913
-  - enabled: 1
-    path: "Assets/Mathieu/Scene/Sc\xE8ne_Test/Porte_fonctionnelle_et_VR_Simulateur.unity"
-    guid: 14a7cec6596bb1a4b9a8df01338605b8
+    path: Assets/Nathan/Scene/LVL1.unity
+    guid: 5ca139f010f5f6549ae1aa04ab681cb8
   m_configObjects: {}

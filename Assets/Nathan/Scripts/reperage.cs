@@ -7,6 +7,8 @@ using System;
 
 public class reperage : MonoBehaviour
 {
+    public LayerMask layerMask;
+
     public float stuntimer;
     public Collider view;
     public bool stun = false;
@@ -86,12 +88,12 @@ public class reperage : MonoBehaviour
             if(timeranim >= 3 && timer<cherchetimer)
             {
                 luck = UnityEngine.Random.Range(1, 5);
-                if (luck <= 1)
+                if (luck == 1)
                 {
                     EnnemyAnim.SetBool("wait1", true);
                     timeranim = 0;
                 }
-                if (luck > 2)
+                if (luck == 2)
                 {
                     EnnemyAnim.SetBool("wait2", true);
                     timeranim = 0;
@@ -110,7 +112,7 @@ public class reperage : MonoBehaviour
             if (zone)
             {
                 RaycastHit hit;
-                if (Physics.Raycast(EnnemyHead, Objectif1, out hit, distance) || Physics.Raycast(EnnemyHead, Objectif2, out hit, distance))
+                if (Physics.Raycast(EnnemyHead, Objectif1, out hit, distance,layerMask) || Physics.Raycast(EnnemyHead, Objectif2, out hit, distance, layerMask))
                 {
                     Debug.Log(hit.transform.name);
                     Debug.DrawRay(EnnemyHead, Objectif1 * distance, Color.yellow);
