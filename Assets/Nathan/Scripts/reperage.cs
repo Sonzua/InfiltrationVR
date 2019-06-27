@@ -8,7 +8,7 @@ using System;
 public class reperage : MonoBehaviour
 {
     public LayerMask layerMask;
-
+    public Light LightEye;
     public float stuntimer;
     public Collider view;
     public bool stun = false;
@@ -175,6 +175,14 @@ public class reperage : MonoBehaviour
                 }
 
             }
+        }
+        if (timer >= cherchetimer)
+        {
+            LightEye.color = Color.red;
+        }
+        else
+        {
+            LightEye.color = Color.green;
         }
 
         //if (timer < cherchetimer)

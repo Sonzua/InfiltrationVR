@@ -11519,11 +11519,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4400999010183090532, guid: b93bac18af6788b4f9713382e3d49784,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4400999010183090529, guid: b93bac18af6788b4f9713382e3d49784,
         type: 3}
       propertyPath: Anim
@@ -11628,6 +11623,11 @@ PrefabInstance:
     - target: {fileID: 1115507452, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
       propertyPath: reperage
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4400999010183090532, guid: b93bac18af6788b4f9713382e3d49784,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
@@ -17960,31 +17960,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4400999010183090534, guid: b93bac18af6788b4f9713382e3d49784,
-        type: 3}
-      propertyPath: patrolPoints.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4400999010183090534, guid: b93bac18af6788b4f9713382e3d49784,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4400999010183090534, guid: b93bac18af6788b4f9713382e3d49784,
-        type: 3}
-      propertyPath: patrolPoints.Array.data[0]
-      value: 
-      objectReference: {fileID: 1671601120}
-    - target: {fileID: 4400999010183090534, guid: b93bac18af6788b4f9713382e3d49784,
-        type: 3}
-      propertyPath: patrolPoints.Array.data[1]
-      value: 
-      objectReference: {fileID: 703786797}
-    - target: {fileID: 4400999010183090534, guid: b93bac18af6788b4f9713382e3d49784,
-        type: 3}
-      propertyPath: patrolPoints.Array.data[2]
-      value: 
-      objectReference: {fileID: 263506003}
     - target: {fileID: 4400999010183090529, guid: b93bac18af6788b4f9713382e3d49784,
         type: 3}
       propertyPath: Anim
@@ -18090,6 +18065,31 @@ PrefabInstance:
       propertyPath: reperage
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4400999010183090534, guid: b93bac18af6788b4f9713382e3d49784,
+        type: 3}
+      propertyPath: patrolPoints.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4400999010183090534, guid: b93bac18af6788b4f9713382e3d49784,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4400999010183090534, guid: b93bac18af6788b4f9713382e3d49784,
+        type: 3}
+      propertyPath: patrolPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1671601120}
+    - target: {fileID: 4400999010183090534, guid: b93bac18af6788b4f9713382e3d49784,
+        type: 3}
+      propertyPath: patrolPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 703786797}
+    - target: {fileID: 4400999010183090534, guid: b93bac18af6788b4f9713382e3d49784,
+        type: 3}
+      propertyPath: patrolPoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 263506003}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
 --- !u!95 &843747091 stripped
@@ -22327,6 +22327,74 @@ PrefabInstance:
       propertyPath: layerMask.m_Bits
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1115507459, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
+      propertyPath: EnnemyAnimRotation
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115507459, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
+      propertyPath: HeadL
+      value: 
+      objectReference: {fileID: 782315576}
+    - target: {fileID: 1115507459, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
+      propertyPath: HeadR
+      value: 
+      objectReference: {fileID: 1094952601}
+    - target: {fileID: 1115507459, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
+      propertyPath: headcolliderl
+      value: 
+      objectReference: {fileID: 782315579}
+    - target: {fileID: 1115507459, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
+      propertyPath: headcolliderr
+      value: 
+      objectReference: {fileID: 1094952604}
+    - target: {fileID: 1115507459, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 559402744}
+    - target: {fileID: 1115507459, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
+      propertyPath: agent
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115507459, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
+      propertyPath: AnimScript
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115507459, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
+      propertyPath: ennemyall
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115507459, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
+      propertyPath: ennemypos
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115507458, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 735280126}
+    - target: {fileID: 1115507455, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 735280126}
+    - target: {fileID: 1115507453, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
+      propertyPath: HeadL
+      value: 
+      objectReference: {fileID: 962114087}
+    - target: {fileID: 1115507453, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
+      propertyPath: HeadR
+      value: 
+      objectReference: {fileID: 986662545}
+    - target: {fileID: 1115507452, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
+      propertyPath: HeadL
+      value: 
+      objectReference: {fileID: 782315576}
+    - target: {fileID: 1115507452, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
+      propertyPath: HeadR
+      value: 
+      objectReference: {fileID: 1094952601}
+    - target: {fileID: 1115507452, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
+      propertyPath: reperage
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1267285899577367442, guid: b93bac18af6788b4f9713382e3d49784,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -22777,74 +22845,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -13.721583
       objectReference: {fileID: 0}
-    - target: {fileID: 1115507459, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
-      propertyPath: EnnemyAnimRotation
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1115507459, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
-      propertyPath: HeadL
-      value: 
-      objectReference: {fileID: 782315576}
-    - target: {fileID: 1115507459, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
-      propertyPath: HeadR
-      value: 
-      objectReference: {fileID: 1094952601}
-    - target: {fileID: 1115507459, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
-      propertyPath: headcolliderl
-      value: 
-      objectReference: {fileID: 782315579}
-    - target: {fileID: 1115507459, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
-      propertyPath: headcolliderr
-      value: 
-      objectReference: {fileID: 1094952604}
-    - target: {fileID: 1115507459, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 559402744}
-    - target: {fileID: 1115507459, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
-      propertyPath: agent
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1115507459, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
-      propertyPath: AnimScript
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1115507459, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
-      propertyPath: ennemyall
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1115507459, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
-      propertyPath: ennemypos
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1115507458, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 735280126}
-    - target: {fileID: 1115507455, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 735280126}
-    - target: {fileID: 1115507453, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
-      propertyPath: HeadL
-      value: 
-      objectReference: {fileID: 962114087}
-    - target: {fileID: 1115507453, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
-      propertyPath: HeadR
-      value: 
-      objectReference: {fileID: 986662545}
-    - target: {fileID: 1115507452, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
-      propertyPath: HeadL
-      value: 
-      objectReference: {fileID: 782315576}
-    - target: {fileID: 1115507452, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
-      propertyPath: HeadR
-      value: 
-      objectReference: {fileID: 1094952601}
-    - target: {fileID: 1115507452, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
-      propertyPath: reperage
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b93bac18af6788b4f9713382e3d49784, type: 3}
 --- !u!65 &1213423650
@@ -22886,7 +22886,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1215523397}
   m_LocalRotation: {x: -0.5000003, y: -0.49999985, z: -0.49999973, w: 0.50000024}
-  m_LocalPosition: {x: -36.4, y: 1.52, z: -33.4}
+  m_LocalPosition: {x: -36.4, y: 1.5, z: -33.4}
   m_LocalScale: {x: 1.5444, y: 1, z: 1}
   m_Children:
   - {fileID: 1827630}

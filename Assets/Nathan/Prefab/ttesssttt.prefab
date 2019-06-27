@@ -153,6 +153,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  LightEye: {fileID: 0}
   stuntimer: 0
   view: {fileID: 0}
   stun: 0
@@ -6575,6 +6576,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  LightEye: {fileID: 0}
   stuntimer: 0
   view: {fileID: 0}
   stun: 0
@@ -6719,6 +6721,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  LightEye: {fileID: 711084844}
   stuntimer: 0
   view: {fileID: 0}
   stun: 0
