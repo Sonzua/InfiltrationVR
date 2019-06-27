@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 449488785336582048}
   - component: {fileID: 449488785336582049}
   - component: {fileID: 449488785336582050}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Couteau
   m_TagString: couteau
   m_Icon: {fileID: 0}
@@ -60,6 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sonJouer: 0
+  lightning: {fileID: 0}
 --- !u!114 &449488785336582051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,7 +195,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1968896726976221039}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,6 +228,18 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 66d6b7148d69abd4e8cb94581393cd5b, type: 3}
       propertyPath: m_Name
       value: Taser
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 66d6b7148d69abd4e8cb94581393cd5b, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 66d6b7148d69abd4e8cb94581393cd5b, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 66d6b7148d69abd4e8cb94581393cd5b, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 66d6b7148d69abd4e8cb94581393cd5b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -302,6 +315,10 @@ PrefabInstance:
     - target: {fileID: 178460, guid: a84cb58ef7faa67488076810242453b9, type: 3}
       propertyPath: m_Name
       value: SimpleLightningBoltAnimatedPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 178460, guid: a84cb58ef7faa67488076810242453b9, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 430986, guid: a84cb58ef7faa67488076810242453b9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -390,6 +407,14 @@ PrefabInstance:
     - target: {fileID: 11413728, guid: a84cb58ef7faa67488076810242453b9, type: 3}
       propertyPath: ChaosFactor
       value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 103226, guid: a84cb58ef7faa67488076810242453b9, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 156244, guid: a84cb58ef7faa67488076810242453b9, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a84cb58ef7faa67488076810242453b9, type: 3}

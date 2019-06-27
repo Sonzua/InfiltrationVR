@@ -28,7 +28,7 @@ public class Narration : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Intro"))
         {
-            FindObjectOfType<AuidoManager>().Play("Couteau");
+            
             tutorielCouteau.SetActive(true);
 
         }
